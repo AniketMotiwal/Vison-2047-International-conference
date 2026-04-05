@@ -1,11 +1,8 @@
 'use client';
 
 import { conferenceData } from '@/lib/conference-data';
-import { useState } from 'react';
 
 export default function ThemesSection() {
-  const [expandedTheme, setExpandedTheme] = useState<number | null>(null);
-
   return (
     <section id="themes" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -18,35 +15,15 @@ export default function ThemesSection() {
           {conferenceData.themes.map((theme) => (
             <div
               key={theme.id}
-              className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden"
-              onClick={() => setExpandedTheme(expandedTheme === theme.id ? null : theme.id)}
+              className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-lg shadow-md hover:shadow-lg transition-all overflow-hidden"
             >
               <div className="bg-gradient-to-r from-[#003D7A] to-[#004A9E] p-6 text-white">
                 <div className="text-4xl font-bold mb-2 opacity-20">{String(theme.id).padStart(2, '0')}</div>
                 <h3 className="text-lg font-bold leading-tight">{theme.title}</h3>
               </div>
 
-              <div className="p-6">
-                <p className="text-sm text-gray-700 mb-4 font-medium">{theme.description}</p>
-
-                {expandedTheme === theme.id && (
-                  <div className="mt-4 pt-4 border-t border-gray-300">
-                    <p className="text-xs font-semibold text-[#003D7A] mb-2 uppercase">Key Areas</p>
-                    <ul className="space-y-2">
-                      {theme.subtopics.map((subtopic, idx) => (
-                        <li key={idx} className="text-xs text-gray-700 flex gap-2">
-                          <span className="text-[#FFB81C]">✓</span>
-                          <span>{subtopic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                <div className="mt-4 flex items-center gap-2 text-[#003D7A] font-semibold text-sm">
-                  <span>{expandedTheme === theme.id ? 'Show Less' : 'Learn More'}</span>
-                  <span className="text-lg">{expandedTheme === theme.id ? '−' : '+'}</span>
-                </div>
+              <div className="p-4">
+                <p className="text-xs text-gray-600 text-center">Theme {theme.id}</p>
               </div>
             </div>
           ))}

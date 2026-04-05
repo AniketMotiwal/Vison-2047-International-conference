@@ -23,104 +23,18 @@ export const conferenceData = {
     'Igniting the eternal Shodh Manthan so every Garib, Yuwa, Annadata, and Nari Shakti rises as a sovereign co-creator of a joyful, self-reliant, and eternally vibrant Bharat.',
   ],
 
-  themes: [
-    {
-      id: 1,
-      title: 'A Young Dynamic Population',
-      description: 'Unleashing the world\'s greatest demographic energy for nation-building',
-      subtopics: [
-        'Youth empowerment and leadership development',
-        'Demographic dividend utilization',
-        'Skill development and capacity building',
-        'Health and wellness infrastructure',
-        'Education sector transformation',
-      ],
-    },
-    {
-      id: 2,
-      title: 'A Fully Employed Bharat',
-      description: 'Reimagining cooperative, knowledge-driven livelihoods, startups, and entrepreneurship',
-      subtopics: [
-        'Dignified self-reliance for every citizen',
-        'Cooperative business models',
-        'Startup ecosystem development',
-        'MSME growth and innovation',
-        'Skill-to-job matching platforms',
-      ],
-    },
-    {
-      id: 3,
-      title: 'The World\'s Largest Economy',
-      description: 'Redesigning global financial architecture through indigenous-to-ultramodern manufacturing',
-      subtopics: [
-        'Digital sovereignty and fintech',
-        'Make in India 2.0',
-        'Global supply chain leadership',
-        'Financial inclusion and accessibility',
-        'Trade and commerce modernization',
-      ],
-    },
-    {
-      id: 4,
-      title: 'An Impenetrable Security System',
-      description: 'Forging full-spectrum strategic dominance from earth to air and ocean depths',
-      subtopics: [
-        'Cybersecurity and digital defense',
-        'Space technology and satellite systems',
-        'Maritime security and naval excellence',
-        'Border management innovation',
-        'Defense manufacturing capabilities',
-      ],
-    },
-    {
-      id: 5,
-      title: 'A Leader in Science and Technology',
-      description: 'Achieving quantum, biological, and energy sovereignty for all of humanity',
-      subtopics: [
-        'Quantum computing and AI advancement',
-        'Biotechnology and life sciences',
-        'Energy independence and renewables',
-        'Clean energy solutions',
-        'Research infrastructure development',
-      ],
-    },
-    {
-      id: 6,
-      title: 'An Environmentally Friendly Bharat',
-      description: 'Weaving the water-energy-food nexus into a net-zero civilizational promise',
-      subtopics: [
-        'Climate action and net-zero commitment',
-        'Water resource management',
-        'Sustainable agriculture',
-        'Forest conservation and biodiversity',
-        'Circular economy implementation',
-      ],
-    },
-    {
-      id: 7,
-      title: 'A Strong Advocate of Global Brotherhood',
-      description: 'Projecting the Vishwaguru vision - leading climate justice, digital equity, and peaceful multilateral governance',
-      subtopics: [
-        'Global South cooperation',
-        'Climate justice initiatives',
-        'Digital equity and access',
-        'Pharmaceutical accessibility',
-        'Peaceful multilateral governance',
-      ],
-    },
-    {
-      id: 8,
-      title: 'A Proponent of High Moral Values',
-      description: 'Building a spiritually grounded, casteless, and harmonious nationhood rooted in Satya, Ahimsa, and universal human welfare',
-      subtopics: [
-        'Ethical governance frameworks',
-        'Social harmony and inclusion',
-        'Cultural heritage preservation',
-        'Universal human welfare',
-        'Spiritual and philosophical integration',
-      ],
-    },
-  ],
+themes: [
+  { id: 1, title: 'A Young Dynamic Population' },
+  { id: 2, title: 'A Fully Employed Bharat' },
+  { id: 3, title: 'An Impenetrable Security System' },
+  { id: 4, title: 'The World\'s Largest Economy' },
+  { id: 5, title: 'A Leader In Science and Technology' },
+  { id: 6, title: 'An Environment Friendly India' },
+  { id: 7, title: 'A Strong Advocate Of Global Brotherhood' },
+  { id: 8, title: 'A Proponent Of High Moral Values' },
+  { id: 9, title: 'One Nation One Research Policy' },
+  { id: 10, title: 'The Viksit Bharat Shiksha Adhishthan Bill, 2025' },
+],
 
   timeline: [
     {
@@ -173,12 +87,7 @@ export const conferenceData = {
     },
   ],
 
-  paymentSteps: [
-    'In Payment Category, select "Conference/Workshop/Other Charges"',
-    'Conference/Workshop code select "CONFR 179 MID"',
-    'Category – "Individual"',
-    'Fill other details and make the payment',
-  ],
+
 
   notes: [
     'All authors and co-authors must register and pay the fee individually.',
@@ -188,14 +97,7 @@ export const conferenceData = {
     'Publication fee for selected research papers in journals will be informed (To be paid only after the intimation of the review committee).',
   ],
 
-  whyAttend: [
-    'Join a landmark convergence of civilizational wisdom, frontier science, and transformative statecraft',
-    'Network with government officials, scientists, youth leaders, and industry pioneers',
-    'Contribute to shaping Bharat\'s future through rigorous research and deliberation',
-    'Present your research and publish in esteemed journals',
-    'Engage with eight transformative thematic tracks shaping the nation\'s destiny',
-    'Be part of a historic Bharat Manthan uniting all stakeholders',
-  ],
+
 
 
 };

@@ -10,10 +10,10 @@ export default function Navbar() {
     { href: '#about', label: 'About' },
     { href: '#themes', label: 'Themes' },
     { href: '#timeline', label: 'Timeline' },
-    { href: '#why-attend', label: 'Why Attend' },
+    { href: '#who-should-attend', label: 'Who Should Attend' },
     { href: '#patrons', label: 'Leadership' },
     { href: '#organizing-committee', label: 'Committee' },
-    { href: '#association-universities', label: 'Universities' },
+    // { href: '#association-universities', label: 'Universities' },
   ];
 
   return (

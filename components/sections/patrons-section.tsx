@@ -7,7 +7,7 @@ export default function PatronsSection() {
         {/* Patrons Screenshot Image */}
         <div className="relative w-full md:w-[78%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202026-04-01%2021-30-16-2g0CBr2iOhUuktb0rlUL8hAlWpoOxb.png"
+            src="/patrons/Patrons.png"
             alt="Conference Patrons - Distinguished leaders and academics"
             width={1200}
             height={1400}
@@ -19,7 +19,7 @@ export default function PatronsSection() {
         {/* Advisory Board Screenshot Image */}
         <div className="relative w-full md:w-[78%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20from%202026-04-01%2022-03-47-ZzUKeCnEHgrusFhjHk5vT4IIUSTZOr.png"
+            src="/advisory/Advisory.png"
             alt="Advisory Board - Conference advisors and committee members"
             width={1200}
             height={1400}

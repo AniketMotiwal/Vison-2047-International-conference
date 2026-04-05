@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-  ],
+, "components/sections/WhoShouldAttend.TSX"  ],
   "exclude": [
     "node_modules"
   ]
