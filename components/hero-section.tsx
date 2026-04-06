@@ -219,8 +219,9 @@ export default function HeroSection() {
 
         {/* Main Title */}
         <h1 className="m-0 mb-3 sm:mb-4 lg:mb-6 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight sm:leading-tight lg:leading-tight" style={{ letterSpacing: '-0.01em' }}>
-          Vision 2047: Prosperous<br className="hidden sm:block" />
-          <span className="block sm:inline">and Great Bharat 2.0</span>
+          <span className="block">Vision 2047: Prosperous</span>
+          <span className="block text-blue-600 my-2">&</span>
+          <span className="block">Great Bharat 2.0</span>
         </h1>
 
         {/* Date row */}
