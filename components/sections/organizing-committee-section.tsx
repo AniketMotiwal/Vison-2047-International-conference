@@ -7,7 +7,7 @@ export default function OrganizingCommittee() {
         {/* Organising Committee Screenshot Image */}
         <div className="relative w-full md:w-[78%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white">
           <Image
-            src="/committee/Committee.png"
+            src="/committee/Committe1.png"
             alt="Organising Committee - Conference organizers and secretaries"
             width={1200}
             height={1400}

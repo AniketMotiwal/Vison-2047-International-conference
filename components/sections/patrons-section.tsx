@@ -7,7 +7,7 @@ export default function PatronsSection() {
         {/* Patrons Screenshot Image */}
         <div className="relative w-full md:w-[78%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white">
           <Image
-            src="/patrons/Patrons.png"
+            src="/patrons/Patrons1.png"
             alt="Conference Patrons - Distinguished leaders and academics"
             width={1200}
             height={1400}
@@ -19,7 +19,7 @@ export default function PatronsSection() {
         {/* Advisory Board Screenshot Image */}
         <div className="relative w-full md:w-[78%] rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white">
           <Image
-            src="/advisory/Advisory.png"
+            src="/advisory/Advisory1.png"
             alt="Advisory Board - Conference advisors and committee members"
             width={1200}
             height={1400}

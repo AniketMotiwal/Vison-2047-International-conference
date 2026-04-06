@@ -33,8 +33,8 @@ export default function Home() {
       <ThemesSection />
       <TimelineSection />
       <WhyAttendSection />
-     {/*  <PatronsSection />*/}
-      {/*<OrganizingCommitteeSection />
+      <PatronsSection />
+      <OrganizingCommitteeSection />
       {/* <AssociationUniversitiesSection /> */}
       <LocationSection />
       <RegistrationSection />

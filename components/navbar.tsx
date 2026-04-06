@@ -11,8 +11,8 @@ export default function Navbar() {
     { href: '#themes', label: 'Themes' },
     { href: '#timeline', label: 'Timeline' },
     { href: '#who-should-attend', label: 'Who Should Attend' },
-    // { href: '#patrons', label: 'Leadership' },
-    // { href: '#organizing-committee', label: 'Committee' },
+    { href: '#patrons', label: 'Leadership' },
+    { href: '#organizing-committee', label: 'Committee' },
     // { href: '#association-universities', label: 'Universities' },
   ];
 
