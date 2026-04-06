@@ -244,7 +244,7 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex gap-3 sm:gap-4 flex-wrap justify-center mb-8 sm:mb-10 lg:mb-12">
           <a
-            href="https://forms.google.com/your-form-link"
+            href="https://forms.gle/Pr1dqxjeK84TAhf36"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 sm:px-8 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 rounded-full font-bold text-sm sm:text-base no-underline shadow-lg hover:shadow-2xl transition-all duration-200 hover:scale-105 inline-block"

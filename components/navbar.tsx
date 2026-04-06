@@ -56,7 +56,7 @@ export default function Navbar() {
               How to Reach
             </a>
             <a
-              href="#registration"
+              href="https://forms.gle/Pr1dqxjeK84TAhf36"
               className="bg-gradient-to-r from-[#FFB81C] to-[#E6A80C] hover:from-[#E6A80C] hover:to-[#FFB81C] text-[#003D7A] font-bold px-6 py-2 rounded-full transition transform hover:scale-105 text-sm"
             >
               Register
@@ -94,7 +94,7 @@ export default function Navbar() {
                 How to Reach
               </a>
               <a
-                href="#registration"
+                href="https://forms.gle/Pr1dqxjeK84TAhf36"
                 className="flex-1 bg-gradient-to-r from-[#FFB81C] to-[#E6A80C] text-[#003D7A] font-bold px-2 py-2 rounded-full text-center text-sm"
                 onClick={() => setIsOpen(false)}
               >
