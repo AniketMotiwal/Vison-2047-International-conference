@@ -26,8 +26,8 @@ export default function Home() {
 
   return (
     <>
-      <LoadingScreen isLoading={isLoading} />
       <Navbar />
+      <LoadingScreen isLoading={isLoading} />
       <HeroSection />
       <AboutSection />
       <ThemesSection />
