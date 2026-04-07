@@ -1,3 +1,5 @@
+
+
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
@@ -26,7 +28,7 @@ export default function HeroSection() {
 
   const fullText = "April 24 – April 26, 2026";
 
-  // ✅ Smooth typing
+  // ✅ Typing effect
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -37,12 +39,12 @@ export default function HeroSection() {
         clearInterval(timer);
         setIsTypingComplete(true);
       }
-    }, 70); // smoother
+    }, 70);
 
     return () => clearInterval(timer);
   }, []);
 
-  // Slider (future-proof)
+  // ✅ Slider
   useEffect(() => {
     if (images.length <= 1) return;
     const interval = setInterval(() => {
@@ -92,7 +94,6 @@ export default function HeroSection() {
         if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
       });
 
-      // lines
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -109,7 +110,6 @@ export default function HeroSection() {
         }
       }
 
-      // dots
       nodes.forEach(n => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
@@ -154,7 +154,8 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative overflow-hidden h-[100dvh] bg-white"
+      id="home" // ✅ FIXED (THIS WAS YOUR BUG)
+      className="relative overflow-hidden h-[100dvh] bg-white scroll-mt-20"
       style={{ fontFamily: "'Georgia', serif" }}
     >
       {/* Canvas */}
@@ -181,14 +182,12 @@ export default function HeroSection() {
 
       {/* Slider */}
       <div className="relative w-full h-full overflow-hidden">
-
         <div
           className="flex w-full h-full transition-transform duration-700"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {images.map((img, i) => (
             <div key={i} className="w-full h-full flex-shrink-0 relative">
-
               <img
                 src={img}
                 alt="slide"
@@ -198,19 +197,16 @@ export default function HeroSection() {
               {/* Overlay */}
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-center px-4">
 
-                {/* ✅ FIXED HEIGHT (no shifting) */}
                 <div className="mb-6 h-[80px] md:h-[120px] flex items-center justify-center">
-
-                  <span className="text-white font-bold tracking-wide leading-[1.2] text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
+                  <span className="text-white font-bold text-3xl md:text-6xl lg:text-7xl xl:text-8xl">
                     {typedText}
                   </span>
 
                   {!isTypingComplete && (
-                    <span className="ml-2 w-[3px] h-[1em] bg-white inline-block animate-pulse" />
+                    <span className="ml-2 w-[3px] h-[1em] bg-white animate-pulse" />
                   )}
                 </div>
 
-                {/* Location */}
                 <div
                   className={`transition-all duration-700 ${
                     isTypingComplete
@@ -218,28 +214,13 @@ export default function HeroSection() {
                       : 'opacity-0 translate-y-4'
                   }`}
                 >
-                  <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium tracking-wide leading-relaxed">
+                  <p className="text-white text-lg md:text-2xl">
                     📍 Indian Institute of Technology, Roorkee, Uttarakhand
                   </p>
                 </div>
 
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Dots */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/50 px-3 py-1 rounded-full">
-          {images.map((_, i) => (
-            <div
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className="h-2 rounded-full cursor-pointer"
-              style={{
-                width: i === currentSlide ? 20 : 8,
-                background: i === currentSlide ? '#FFB81C' : '#fff',
-              }}
-            />
           ))}
         </div>
       </div>
