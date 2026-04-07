@@ -172,56 +172,15 @@ export default function HeroSection() {
       ))}
 
       {/* Main content container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex flex-col items-center w-full flex-1">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 flex flex-col items-center w-full flex-1">
 
-        {/* Logos Row */}
-        <div className="flex items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 lg:mb-10 flex-wrap">
-          {/* IIT Roorkee Logo */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bg-white flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
-              <img 
-                src="/iit-logo.png" 
-                className="w-11/12 h-11/12 object-contain" 
-                alt="IIT Roorkee" 
-                loading="eager" 
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-blue-900 text-center">
-              IIT ROORKEE
-            </span>
-          </div>
 
-          {/* Divider - hidden on mobile */}
-          <div className="hidden sm:block w-px h-16 sm:h-20 lg:h-24 bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
-
-          {/* Swadeshi Logo */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full bg-white flex items-center justify-center shadow-md hover:shadow-lg transition-shadow">
-              <img 
-                src="/swadeshi-logo.png" 
-                className="w-11/12 h-11/12 object-contain" 
-                alt="Swadeshi" 
-                loading="eager" 
-              />
-            </div>
-            <span className="text-xs sm:text-sm font-bold text-amber-700 text-center">
-              स्वदेशी संस्थान
-            </span>
-          </div>
-        </div>
-
-        {/* "International Conference on" badge */}
-        <div className="border-2 border-gray-900 rounded px-6 sm:px-8 py-1.5 sm:py-2 mb-4 sm:mb-6 lg:mb-8 bg-white/70 backdrop-blur-sm">
-          <p className="m-0 text-sm sm:text-base font-bold text-gray-900 tracking-wider">
-            International Conference on
-          </p>
-        </div>
 
         {/* Main Title */}
-        <h1 className="m-0 mb-3 sm:mb-4 lg:mb-6 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight sm:leading-tight lg:leading-tight" style={{ letterSpacing: '-0.01em' }}>
-          <span className="block">Vision 2047: Prosperous</span>
-          <span className="block text-blue-600 my-2">&</span>
-          <span className="block">Great Bharat 2.0</span>
+        <h1 className="m-0 mb-3 sm:mb-4 lg:mb-6 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight sm:leading-tight lg:leading-tight animated-title" style={{ letterSpacing: '-0.01em' }}>
+          <span className="inline-block animate-pulse">VISION 2047: PROSPEROUS</span> <br className="hidden sm:inline"/>
+          <span className="inline-block text-gray-900 mx-1 sm:mx-2 animate-bounce" style={{animationDelay: '0.1s'}}>AND</span>
+          <span className="inline-block animate-pulse" style={{animationDelay: '0.2s'}}>GREAT BHARAT 2.0</span>
         </h1>
 
         {/* Date row */}
@@ -272,23 +231,23 @@ export default function HeroSection() {
               key={i}
               src={img}
               alt={`Slide ${i + 1}`}
-              className="w-full h-64 sm:h-80 lg:h-96 object-cover flex-shrink-0"
-              style={{ objectPosition: 'center 55%' }}
+              className="w-full h-auto lg:h-screen object-cover flex-shrink-0 shadow-2xl"
+              style={{ objectPosition: 'center 40%', minHeight: '400px' }}
             />
           ))}
         </div>
 
         {/* Dots indicator */}
-        <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 bg-black/40 px-4 py-2 rounded-full backdrop-blur-md">
           {images.map((_: string, i: number) => (
             <div
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className="rounded-full cursor-pointer transition-all duration-300"
+              className="rounded-full cursor-pointer transition-all duration-300 hover:scale-125"
               style={{
-                width: i === currentSlide ? '20px' : '8px',
-                height: '8px',
-                background: i === currentSlide ? '#FFB81C' : 'rgba(255,255,255,0.6)',
+                width: i === currentSlide ? '24px' : '10px',
+                height: '10px',
+                background: i === currentSlide ? '#FFB81C' : 'rgba(255,255,255,0.7)',
               }}
             />
           ))}
@@ -318,6 +277,25 @@ export default function HeroSection() {
         @keyframes floatUp {
           0% { opacity: 1; transform: translateY(0) scale(1); }
           100% { opacity: 0; transform: translateY(-110px) scale(0); }
+        }
+        
+        @keyframes colorShift {
+          0% { color: #1F2937; }
+          50% { color: #1E40AF; }
+          100% { color: #1F2937; }
+        }
+        
+        .animated-title span {
+          color: #1F2937;
+          animation: colorShift 3s ease-in-out infinite;
+        }
+        
+        .animated-title span:nth-child(2) {
+          animation: colorShift 3s ease-in-out infinite 0.5s;
+        }
+        
+        .animated-title span:nth-child(3) {
+          animation: colorShift 3s ease-in-out infinite 1s;
         }
         
         @media (max-width: 640px) {

@@ -14,7 +14,7 @@ import OrganizingCommitteeSection from '@/components/sections/organizing-committ
 import LocationSection from '@/components/sections/location-section';
 import RegistrationSection from '@/components/sections/registration-section';
 import Footer from '@/components/footer';
-
+import Header from '@/components/header';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+      <Header />
       <Navbar />
       <LoadingScreen isLoading={isLoading} />
       <HeroSection />

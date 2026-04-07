@@ -64,9 +64,7 @@ export default function Navbar() {
         .nav-link {
           position: relative;
           transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-          border: 1.5px solid rgba(59, 130, 246, 0.2);
           border-radius: 8px;
-          animation: borderGlow 3s ease-in-out infinite;
         }
         
         .nav-link::after {
@@ -88,16 +86,14 @@ export default function Navbar() {
         .nav-link:hover {
           color: #003D7A;
           transform: translateY(-2px);
-          border-color: rgba(59, 130, 246, 0.8);
-          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3), inset 0 0 10px rgba(59, 130, 246, 0.2);
+          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
         
         .btn-primary {
-          animation: slideDown 0.6s ease-out 0.3s both, borderGlow 3s ease-in-out infinite;
+          animation: slideDown 0.6s ease-out 0.3s both;
           position: relative;
           overflow: hidden;
           transition: all 0.3s ease;
-          border: 1.5px solid rgba(59, 130, 246, 0.3);
           padding: 12px 28px;
         }
         
@@ -118,16 +114,14 @@ export default function Navbar() {
         
         .btn-primary:hover {
           transform: translateY(-3px) scale(1.05);
-          box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5), inset 0 0 15px rgba(59, 130, 246, 0.3);
-          border-color: rgba(59, 130, 246, 0.8);
+          box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
         }
         
         .btn-secondary {
-          animation: slideDown 0.6s ease-out 0.4s both, borderGlowYellow 3s ease-in-out infinite;
+          animation: slideDown 0.6s ease-out 0.4s both;
           position: relative;
           overflow: hidden;
           transition: all 0.3s ease;
-          border: 1.5px solid rgba(255, 184, 28, 0.3);
           padding: 12px 28px;
         }
         
@@ -148,8 +142,7 @@ export default function Navbar() {
         
         .btn-secondary:hover {
           transform: translateY(-3px) scale(1.05);
-          box-shadow: 0 10px 25px rgba(255, 184, 28, 0.5), inset 0 0 15px rgba(255, 184, 28, 0.3);
-          border-color: rgba(255, 184, 28, 0.9);
+          box-shadow: 0 10px 25px rgba(255, 184, 28, 0.5);
         }
         
         .logo-hover {
