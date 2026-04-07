@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import LoadingScreen from '@/components/loading-screen';
-import Navbar from '@/components/navbar';
 import HeroSection from '@/components/hero-section';
 import AboutSection from '@/components/sections/about-section';
 import ThemesSection from '@/components/sections/themes-section';
@@ -15,6 +14,7 @@ import LocationSection from '@/components/sections/location-section';
 import RegistrationSection from '@/components/sections/registration-section';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
+import Sidebar from '@/components/Sidebar';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Navbar />
+      <Sidebar />
       <LoadingScreen isLoading={isLoading} />
       <HeroSection />
       <AboutSection />
