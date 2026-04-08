@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[30620,["/_next/static/chunks/16gli4r~zr9hd.js","/_next/static/chunks/0l98br0g8~6p3.js"],"default"]
-3:I[63010,["/_next/static/chunks/16gli4r~zr9hd.js","/_next/static/chunks/0l98br0g8~6p3.js"],"default"]
+2:I[30620,["/_next/static/chunks/0ta4b0p~lxxcb.js","/_next/static/chunks/0lddchsph_aez.js"],"default"]
+3:I[63010,["/_next/static/chunks/0ta4b0p~lxxcb.js","/_next/static/chunks/0lddchsph_aez.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"bsyChe-uoo5tpc1ZdR82V"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"Gkp0in1QAPj-dEpbcDiRy"}

@@ -6,10 +6,7 @@ export default function RegistrationSection() {
   return (
     <section id="registration" className="py-16 md:py-24 px-0 bg-white">
       <div className="w-full">
-        <div className="text-center mb-16 px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Registration & Payment</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto"></div>
-        </div>
+    
 
         <Image
           src="/Links.png"

@@ -37,15 +37,14 @@ export default function Footer() {
       <div className="cards-row">
         <div className="footer-card">
           <h4>Conference</h4>
-          <p>Vision 2047 International Conference on Prosperous &amp; Great Bharat 2.0</p>
+          <p>Vision 2047: Prosperous and Great Bharat 2.0</p>
         </div>
         <div className="footer-card">
           <h4>Venue &amp; Date</h4>
-          <p>IIT Roorkee Campus<br />2047 — The Golden Era</p>
-        </div>
-        <div className="footer-card">
-          <h4>Contact</h4>
-          <p>vision2047@iitr.ac.in<br />+91 1332 000 000</p>
+          <p>
+            📅 April 24 – April 26, 2026 <br />
+            📍 Indian Institute of Technology Roorkee, Roorkee, Uttarakhand
+          </p>
         </div>
       </div>
 
@@ -68,9 +67,7 @@ export default function Footer() {
           <p style={{ fontSize: 14, color: '#7A99BB', fontWeight: 400, margin: 0 }}>
             © {new Date().getFullYear()} Vision 2047 International Conference. All rights reserved.
           </p>
-          <p style={{ fontSize: 11, color: 'rgba(255,184,28,0.65)', letterSpacing: '0.1em', fontFamily: "'Cinzel', serif", fontWeight: 600, margin: '6px 0 0' }}>
-            Designed by Aniket Motiwal
-          </p>
+         
         </div>
         <div className="bottom-links">
           <a href="#" className="footer-link">Privacy Policy</a>

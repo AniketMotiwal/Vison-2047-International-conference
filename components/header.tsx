@@ -1,43 +1,109 @@
+// 'use client';
+
+// import Image from 'next/image';
+
+// const Header = () => {
+//   return (
+//     <header
+//       className="relative flex items-stretch justify-between bg-white text-black shadow-lg border border-gray-300"
+//       style={{ minHeight: '120px' }}
+//     >
+//       {/* Gradient */}
+//       <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-300 opacity-40 z-[-1]" />
+
+//       {/* Left Logo */}
+//       <div className="flex-shrink-0 flex items-center px-3 sm:px-4">
+//         <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32">
+//           <Image
+//             src="/iit_logo.webp"
+//             alt="IIT Logo"
+//             fill
+//             className="object-contain"
+//             priority
+//           />
+//         </div>
+//       </div>
+
+//       {/* Center Content */}
+//       <div className="flex-1 min-w-0 flex flex-col items-center justify-center text-center py-2 px-1">
+//         <p className="font-bold text-blue-900 text-[clamp(9px,1.5vw,22px)] whitespace-nowrap">
+//           INTERNATIONAL CONFERENCE ON
+//         </p>
+//         <h1 className="font-extrabold text-orange-500 leading-tight text-[clamp(18px,4vw,58px)] break-words w-full">
+//           Vision 2047: Prosperous and Great Bharat 2.0
+//         </h1>
+//       </div>
+
+//       {/* Right Logo */}
+//       <div className="flex-shrink-0 flex items-center px-3 sm:px-4">
+//         <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-48 lg:h-48">
+//           <Image
+//             src="/swadesheade.webp"
+//             alt="Swadeshi Logo"
+//             fill
+//             className="object-contain"
+//             priority
+//           />
+//         </div>
+//       </div>
+//     </header>
+//   );
+// };
+
+// export default Header;
+
 'use client';
 
-export default function Header() {
+import Image from 'next/image';
+
+const Header = () => {
   return (
-    <header className="relative w-full bg-white shadow-md py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20 overflow-hidden">
+    <header
+      className="relative flex items-stretch justify-between bg-white text-black shadow-lg border border-gray-300"
+      style={{ minHeight: '60px' }}
+    >
+      {/* Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-300 opacity-40 z-[-1]" />
 
-      {/* LEFT LOGO - Bigger for 2560px */}
-      <div className="absolute left-3 sm:left-4 md:left-6 lg:left-8 xl:left-12 2xl:left-20 top-1/2 -translate-y-1/2 z-10">
-        <img
-          src="/iit-logo.png"
-          alt="IIT Logo"
-          className="w-14 sm:w-16 md:w-20 lg:w-24 xl:w-28 2xl:w-40 object-contain"
-        />
+      {/* Left Logo */}
+      <div className="flex-shrink-0 flex items-center px-1.5 sm:px-3 md:px-4">
+        <div className="relative w-10 h-10 xs:w-12 xs:h-12 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+          <Image
+            src="/iit_logo.webp"
+            alt="IIT Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
 
-      {/* RIGHT LOGO - Bigger for 2560px */}
-      <div className="absolute right-3 sm:right-4 md:right-6 lg:right-8 xl:right-12 2xl:right-20 top-1/2 -translate-y-1/2 z-10">
-        <img
-          src="/swadesheader.png"
-          alt="Swades Header Logo"
-          className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-44 object-contain"
-        />
-      </div>
-
-      {/* CENTER TEXT - More side spacing on 2560px */}
-      <div className="text-center px-12 xs:px-16 sm:px-20 md:px-28 lg:px-36 xl:px-48 2xl:px-64">
-        
-        <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl font-bold text-blue-900 mb-1 sm:mb-2 md:mb-3 tracking-wide">
+      {/* Center Content */}
+      <div className="flex-1 min-w-0 flex flex-col items-center justify-center text-center py-1 sm:py-2 px-1">
+        <p className="font-bold text-blue-900 text-[clamp(6px,2vw,22px)] whitespace-nowrap">
           INTERNATIONAL CONFERENCE ON
         </p>
-
-        <h1 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl font-extrabold text-orange-500 leading-tight sm:whitespace-normal md:whitespace-nowrap">
+        <h1 className="font-extrabold text-orange-500 leading-tight text-[clamp(10px,3.5vw,58px)] w-full"
+          style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
+        >
           Vision 2047: Prosperous and Great Bharat 2.0
         </h1>
-
       </div>
 
-      {/* GRADIENT LINE */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] sm:h-[3px] md:h-[4px] lg:h-[5px] xl:h-[6px] bg-gradient-to-r from-blue-900 via-orange-500 via-yellow-400 to-blue-900"></div>
-
+      {/* Right Logo */}
+      <div className="flex-shrink-0 flex items-center px-1.5 sm:px-3 md:px-4">
+        <div className="relative w-14 h-14 xs:w-16 xs:h-16 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-48 lg:h-48">
+          <Image
+            src="/swadesheade.webp"
+            alt="Swadeshi Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;
