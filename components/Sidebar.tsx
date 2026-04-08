@@ -15,10 +15,14 @@ const Navbar = () => {
     { label: 'Themes', href: '#themes' },
     { label: 'Timeline', href: '#timeline' },
     { label: 'Who Should Attend', href: '#who-should-attend' },
-    { label: 'Leadership', href: '#patrons' },
-    { label: 'Committee', href: '#organizing-committee' },
+    { label: 'Patrons', href: '#patrons' },
+    { label: 'Advisory Board', href: '#advisory-board' },
+    { label: 'organizing-committee', href: '#organizing-committee' },
     { label: 'How to Reach', href: '#location' },
     { label: 'Links', href: '#registration' },
+     { label: 'Brochure', href: '#brochure' },
+       { label: 'Contact Us', href: '#contactus' },
+
   ];
 
   useEffect(() => {

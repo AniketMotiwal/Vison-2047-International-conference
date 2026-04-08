@@ -135,10 +135,10 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden h-[100dvh] bg-white scroll-mt-20"
+      className="relative overflow-hidden w-full bg-white scroll-mt-20"
       style={{ fontFamily: "'Georgia', serif" }}
     >
-      {/* Canvas */}
+      {/* Canvas — stretches to fill whatever height the image gives */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none z-10"
@@ -161,24 +161,25 @@ export default function HeroSection() {
       ))}
 
       {/* Slider */}
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <div
-          className="flex w-full h-full transition-transform duration-700"
+          className="flex w-full transition-transform duration-700"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {images.map((img, i) => (
-            <div key={i} className="w-full h-full flex-shrink-0 relative">
+            <div key={i} className="w-full flex-shrink-0 relative">
+              {/* Full-width image, natural height — no gaps */}
               <img
                 src={img}
                 alt="slide"
-                className="w-full h-full object-cover"
+                className="w-full h-auto block"
               />
 
               {/* Dark gradient overlay at bottom for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
               {/* TEXT OVERLAY */}
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-16 md:pb-24 lg:pb-32 text-center px-6 sm:px-10 lg:px-20">
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-10 md:pb-16 lg:pb-20 text-center px-6 sm:px-10 lg:px-20">
 
                 {/* Transparent pill background behind all text */}
                 <div

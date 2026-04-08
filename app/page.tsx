@@ -9,12 +9,13 @@ import TimelineSection from '@/components/sections/timeline-section';
 import WhyAttendSection from '@/components/sections/WhoShouldAttend';
 import PatronsSection from '@/components/sections/patrons-section';
 import OrganizingCommitteeSection from '@/components/sections/organizing-committee-section';
-// import AssociationUniversitiesSection from '@/components/sections/association-universities-section';
+import AssociationUniversitiesSection from '@/components/sections/association-universities-section';
 import LocationSection from '@/components/sections/location-section';
 import RegistrationSection from '@/components/sections/registration-section';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Sidebar from '@/components/Sidebar';
+import ContactUs from '@/components/Contact-us';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -36,9 +37,10 @@ export default function Home() {
       <WhyAttendSection />
       <PatronsSection />
       <OrganizingCommitteeSection />
-      {/* <AssociationUniversitiesSection /> */}
       <LocationSection />
       <RegistrationSection />
+        <AssociationUniversitiesSection />
+        <ContactUs />
       <Footer />
     </>
   );

@@ -6,15 +6,15 @@ export default function AssociationUniversitiesSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section id="association-universities" className="w-full py-16 md:py-24 bg-white">
+    <section id="brochure" className="w-full py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
+        {/* Title
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-wider">
             ASSOCIATION OF INDIAN UNIVERSITIES
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto"></div>
-        </div>
+        </div> */}
 
         {/* PDF Viewer Section */}
         <div className="mt-8">
@@ -35,7 +35,7 @@ export default function AssociationUniversitiesSection() {
             {/* PDF Embed */}
             <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'h-[50vh] md:h-[80vh]' : 'h-[40vh] md:h-[60vh]'}`}>
               <iframe
-                src="/global-institutions/Vision_2047_IIT_Roorkee_10.pdf"
+                src="/Brochure Conference 3 Big 8 April.pdf"
                 className="w-full h-full"
                 title="Vision 2047 IIT Roorkee PDF"
                 style={{ 
@@ -51,7 +51,7 @@ export default function AssociationUniversitiesSection() {
             <div className="bg-gray-50 px-4 py-2 text-xs text-gray-500 flex justify-between items-center border-t border-gray-200">
               <span>📄 Vision 2047: Prosperous & Great Bharat 2.0</span>
               <a
-                href="/global-institutions/Vision_2047_IIT_Roorkee_10.pdf"
+                href="/Brochure Conference 3 Big 8 April.pdf"
                 download
                 className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >

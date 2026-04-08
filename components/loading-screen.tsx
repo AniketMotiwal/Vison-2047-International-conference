@@ -54,16 +54,17 @@ export default function LoadingScreen({ isLoading = true }: { isLoading?: boolea
           </div>
 
           {/* Swadeshi Logo */}
-          <div className="relative" style={{
-            animation: 'float 5s ease-in-out infinite reverse'
-          }}>
-            <div className="absolute inset-0 bg-white rounded-full opacity-20 blur-2xl" />
-            <img 
-              src="/swadeshi-logo.png" 
-              alt="Swadeshi Shodh Sansthan" 
-              className="w-48 md:w-56 h-48 md:h-56 object-contain drop-shadow-2xl relative z-10"
-            />
-          </div>
+        {/* Swadeshi Logo */}
+<div className="relative" style={{
+  animation: 'float 5s ease-in-out infinite reverse'
+}}>
+  <div className="absolute inset-0 bg-white rounded-full opacity-20 blur-2xl" />
+  <img 
+    src="/swadeshi-logo.png" 
+    alt="Swadeshi Shodh Sansthan" 
+    className="w-64 md:w-85 h-64 md:h-85 object-contain drop-shadow-2xl relative z-10"
+  />
+</div>
         </div>
 
         {/* Main Text */}

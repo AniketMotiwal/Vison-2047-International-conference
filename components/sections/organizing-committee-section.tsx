@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function OrganizingCommittee() {
   return (
-    <section id="organizing-committee" className="py-8 md:py-12">
+    <section id="organizing-committee" className="py-8 md:py-12 scroll-mt-20">
 
       {/* Heading */}
       <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-8">
