@@ -35,7 +35,7 @@ export default function AssociationUniversitiesSection() {
             {/* PDF Embed */}
             <div className={`transition-all duration-300 overflow-hidden ${isExpanded ? 'h-[50vh] md:h-[80vh]' : 'h-[40vh] md:h-[60vh]'}`}>
               <iframe
-                src="/Brochure Conference 3 Big 8 April.pdf"
+                src="/Brochure Conference 3 Big 8 April part 2.pdf"
                 className="w-full h-full"
                 title="Vision 2047 IIT Roorkee PDF"
                 style={{ 
@@ -51,7 +51,7 @@ export default function AssociationUniversitiesSection() {
             <div className="bg-gray-50 px-4 py-2 text-xs text-gray-500 flex justify-between items-center border-t border-gray-200">
               <span>📄 Vision 2047: Prosperous & Great Bharat 2.0</span>
               <a
-                href="/Brochure Conference 3 Big 8 April.pdf"
+                href="/Brochure Conference 3 Big 8 April part 2.pdf"
                 download
                 className="text-blue-600 hover:text-blue-800 flex items-center gap-1"
               >
