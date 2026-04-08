@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
@@ -154,7 +152,7 @@ export default function HeroSection() {
 
   return (
     <section
-      id="home" // ✅ FIXED (THIS WAS YOUR BUG)
+      id="home"
       className="relative overflow-hidden h-[100dvh] bg-white scroll-mt-20"
       style={{ fontFamily: "'Georgia', serif" }}
     >
@@ -194,19 +192,23 @@ export default function HeroSection() {
                 className="w-full h-full object-cover"
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-center px-4">
+              {/* 🔥 TEXT OVERLAY (FIXED) */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-36 md:translate-y-44 lg:translate-y-52 text-center px-6 sm:px-10 lg:px-20">
 
-                <div className="mb-6 h-[80px] md:h-[120px] flex items-center justify-center">
-                  <span className="text-white font-bold text-3xl md:text-6xl lg:text-7xl xl:text-8xl">
-                    {typedText}
-                  </span>
+                {/* DATE */}
+                <div className="mb-4 md:mb-6 min-h-[60px] md:min-h-[100px] flex items-center justify-center w-full">
+                  <div className="w-full flex justify-center">
+                    <span className="text-white font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-wide max-w-[1000px]">
+                      {typedText}
+                    </span>
+                  </div>
 
                   {!isTypingComplete && (
                     <span className="ml-2 w-[3px] h-[1em] bg-white animate-pulse" />
                   )}
                 </div>
 
+                {/* LOCATION */}
                 <div
                   className={`transition-all duration-700 ${
                     isTypingComplete
@@ -214,7 +216,7 @@ export default function HeroSection() {
                       : 'opacity-0 translate-y-4'
                   }`}
                 >
-                  <p className="text-white text-lg md:text-2xl">
+                 <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl mt-3 md:mt-5 max-w-[900px] mx-auto leading-relaxed font-medium">
                     📍 Indian Institute of Technology, Roorkee, Uttarakhand
                   </p>
                 </div>
