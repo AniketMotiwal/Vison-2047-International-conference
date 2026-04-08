@@ -20,9 +20,7 @@ const ContactCard: React.FC<{ prof: Professor }> = ({ prof }) => (
     <p className="text-gray-600 flex items-center gap-2">
       📞 <a href={`tel:${prof.contact}`} className="text-blue-500 hover:underline">{prof.contact}</a>
     </p>
-    <p className="text-gray-600 flex items-center gap-2">
-      ✉️ <a href={`mailto:${sharedEmail}`} className="text-blue-500 hover:underline">{sharedEmail}</a>
-    </p>
+    
   </div>
 );
 
