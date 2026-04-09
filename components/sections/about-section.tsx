@@ -43,7 +43,7 @@ export default function AboutSection() {
 
       {/* 🔥 Heading (UNCHANGED) */}
       <div className="text-center mb-16 px-4">
-        <div className="inline-block bg-gradient-to-r from-[#4a3f83] via-[#6b4a8f] to-[#d4454d] px-8 md:px-12 py-4 md:py-5 rounded-xl shadow-xl">
+        <div className="inline-block bg-gradient-to-r from-[#FFD124]  to-[#004178] px-8 md:px-12 py-4 md:py-5 rounded-xl shadow-xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-wider">
             ABOUT THE CONFERENCE
           </h2>
