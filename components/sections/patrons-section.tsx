@@ -10,7 +10,7 @@ export default function PatronsSection() {
         </h2>
         <div className="w-full">
           <Image
-            src="/patrons/Patrons2.png"
+            src="/patrons/Patrons (2).png"
             alt="Conference Patrons"
             width={1920}
             height={1400}
