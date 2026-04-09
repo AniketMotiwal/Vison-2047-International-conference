@@ -62,6 +62,7 @@ import Image from 'next/image';
 const Header = () => {
   return (
     <header
+      id="home"
       className="relative flex items-stretch justify-between bg-white text-black shadow-lg border border-gray-300"
       style={{ minHeight: '60px' }}
     >
