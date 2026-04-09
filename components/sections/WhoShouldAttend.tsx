@@ -14,7 +14,7 @@ export default function WhoShouldAttend() {
             Who Should Attend?
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-justify font-serif">
             Abstract submission is open to all the academicians, PhD scholars,
             students, scientists, researchers, policymakers, public representatives,
             lawyers, youth leaders, industry pioneers, and every inspired citizen

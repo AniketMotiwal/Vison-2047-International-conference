@@ -1,12 +1,10 @@
 'use client';
-
 import { conferenceData } from '@/lib/conference-data';
 import Script from "next/script";
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-28 bg-white">
-
       {/* 💣 HIDDEN SEO CONTENT (Google ke liye) */}
       <h2 className="sr-only">
         About Vision 2047 International Conference IIT Roorkee India
@@ -54,11 +52,9 @@ export default function AboutSection() {
 
       {/* 🔥 FULL WIDTH CONTENT */}
       <div className="w-full px-2 md:px-6">
-
         {/* 🔥 About Description Box */}
         <div className="mb-20 relative w-full">
           <div className="relative border-2 border-dashed border-gray-400 p-6 md:p-12 bg-gray-50 rounded-lg w-full">
-
             <div className="absolute -top-4 -left-2 md:-left-4 w-6 h-6 md:w-8 md:h-8 bg-red-600 rounded-full"></div>
             <div className="absolute -top-4 -right-2 md:-right-4 w-6 h-6 md:w-8 md:h-8 bg-red-600 rounded-full"></div>
             <div className="absolute -bottom-4 -left-2 md:-left-4 w-6 h-6 md:w-8 md:h-8 bg-blue-900 rounded-full"></div>
@@ -94,12 +90,11 @@ export default function AboutSection() {
 
         {/* 🔥 Mission & Vision */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
-
           <div className="bg-white rounded-xl shadow-xl p-8 md:p-10 border-l-4 border-blue-900 hover:shadow-2xl transition-shadow">
             <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 uppercase">
               {conferenceData.mission.title}
             </h3>
-            <p className="text-gray-700 text-lg leading-relaxed font-serif">
+            <p className="text-gray-700 text-lg leading-relaxed text-justify font-serif">
               {conferenceData.mission.description}
             </p>
           </div>
@@ -108,11 +103,10 @@ export default function AboutSection() {
             <h3 className="text-2xl md:text-3xl font-bold text-yellow-600 mb-6 uppercase">
               {conferenceData.vision.title}
             </h3>
-            <p className="text-gray-700 text-lg leading-relaxed font-serif">
+            <p className="text-gray-700 text-lg leading-relaxed text-justify font-serif">
               {conferenceData.vision.description}
             </p>
           </div>
-
         </div>
 
         {/* 🔥 Objectives */}
@@ -129,14 +123,13 @@ export default function AboutSection() {
                     {idx + 1}
                   </span>
                 </div>
-                <p className="text-white text-lg leading-relaxed font-serif">
+                <p className="text-white text-lg leading-relaxed text-justify font-serif">
                   {obj}
                 </p>
               </div>
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
