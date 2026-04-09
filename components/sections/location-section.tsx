@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function LocationSection() {
   return (
-    <section id="location" className="w-screen overflow-hidden">
+    <section id="location" className="w-screen overflow-hidden scroll-mt-20">
       <Image
         src="/HOW TO REACH IIT ROORKEE (1).png"
         alt="How to Reach IIT Roorkee"
