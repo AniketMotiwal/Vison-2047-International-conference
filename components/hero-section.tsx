@@ -76,12 +76,14 @@ export default function HeroSection() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const nodes = nodesRef.current;
+
       nodes.forEach(n => {
         n.x += n.vx;
         n.y += n.vy;
         if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
         if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
       });
+
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -96,14 +98,17 @@ export default function HeroSection() {
           }
         }
       }
+
       nodes.forEach(n => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(255,255,255,0.25)';
         ctx.fill();
       });
+
       animRef.current = requestAnimationFrame(draw);
     };
+
     draw();
 
     return () => {
@@ -138,7 +143,13 @@ export default function HeroSection() {
       className="relative overflow-hidden w-full bg-white scroll-mt-20"
       style={{ fontFamily: "'Georgia', serif" }}
     >
-      {/* Canvas — stretches to fill whatever height the image gives */}
+
+      {/* 💣 HIDDEN SEO H1 (Google ke liye) */}
+      <h1 className="sr-only">
+        Vision 2047 International Conference IIT Roorkee April 24–26 2026
+      </h1>
+
+      {/* Canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none z-10"
@@ -168,25 +179,23 @@ export default function HeroSection() {
         >
           {images.map((img, i) => (
             <div key={i} className="w-full flex-shrink-0 relative">
-              {/* Full-width image, natural height — no gaps */}
+              
+              {/* ✅ SEO ALT FIX */}
               <img
                 src={img}
-                alt="slide"
+                alt="Vision 2047 Conference at IIT Roorkee campus Uttarakhand India"
                 className="w-full h-auto block"
               />
 
-              {/* Dark gradient overlay at bottom for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              {/* TEXT OVERLAY */}
+              {/* TEXT OVERLAY (UNCHANGED ✅) */}
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-10 md:pb-16 lg:pb-20 text-center px-6 sm:px-10 lg:px-20">
 
-                {/* Transparent pill background behind all text */}
                 <div
                   className="flex flex-col items-center gap-3 sm:gap-4 px-8 sm:px-12 md:px-16 py-5 sm:py-7 rounded-2xl"
                   style={{ background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(6px)' }}
                 >
-                  {/* DATE with typing effect */}
                   <div className="flex items-center justify-center min-h-[40px] sm:min-h-[56px]">
                     <span className="text-white font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-widest drop-shadow-lg">
                       {typedText}
@@ -196,13 +205,11 @@ export default function HeroSection() {
                     )}
                   </div>
 
-                  {/* LOCATION */}
                   <div
                     className={`transition-all duration-700 ${
                       isTypingComplete ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                     }`}
                   >
-                    {/* Divider line */}
                     <div className="w-24 h-px bg-white/40 mx-auto mb-3" />
                     <p className="text-white/90 text-base sm:text-xl md:text-2xl lg:text-3xl max-w-[800px] mx-auto leading-relaxed font-medium tracking-wide">
                       📍 Indian Institute of Technology, Roorkee, Uttarakhand

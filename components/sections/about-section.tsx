@@ -1,12 +1,49 @@
 'use client';
 
 import { conferenceData } from '@/lib/conference-data';
+import Script from "next/script";
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-28 bg-white">
 
-      {/* 🔥 Heading */}
+      {/* 💣 HIDDEN SEO CONTENT (Google ke liye) */}
+      <h2 className="sr-only">
+        About Vision 2047 International Conference IIT Roorkee India
+      </h2>
+
+      <p className="sr-only">
+        Vision 2047 International Conference at IIT Roorkee is a major academic
+        and research conference in India focusing on AI, governance, sustainability,
+        innovation and Bharat development roadmap 2047.
+      </p>
+
+      {/* 💣 STRUCTURED DATA (SEO BOOST) */}
+      <Script
+        id="about-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            name: "Vision 2047 International Conference",
+            description:
+              "International Conference on Vision 2047 at IIT Roorkee focusing on science, governance and innovation.",
+            location: {
+              "@type": "Place",
+              name: "IIT Roorkee",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Roorkee",
+                addressRegion: "Uttarakhand",
+                addressCountry: "India"
+              }
+            }
+          }),
+        }}
+      />
+
+      {/* 🔥 Heading (UNCHANGED) */}
       <div className="text-center mb-16 px-4">
         <div className="inline-block bg-gradient-to-r from-[#4a3f83] via-[#6b4a8f] to-[#d4454d] px-8 md:px-12 py-4 md:py-5 rounded-xl shadow-xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-wider">
@@ -22,13 +59,11 @@ export default function AboutSection() {
         <div className="mb-20 relative w-full">
           <div className="relative border-2 border-dashed border-gray-400 p-6 md:p-12 bg-gray-50 rounded-lg w-full">
 
-            {/* Decorative Circles */}
             <div className="absolute -top-4 -left-2 md:-left-4 w-6 h-6 md:w-8 md:h-8 bg-red-600 rounded-full"></div>
             <div className="absolute -top-4 -right-2 md:-right-4 w-6 h-6 md:w-8 md:h-8 bg-red-600 rounded-full"></div>
             <div className="absolute -bottom-4 -left-2 md:-left-4 w-6 h-6 md:w-8 md:h-8 bg-blue-900 rounded-full"></div>
             <div className="absolute -bottom-4 -right-2 md:-right-4 w-6 h-6 md:w-8 md:h-8 bg-blue-900 rounded-full"></div>
 
-            {/* Main Text */}
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 text-justify font-serif">
               The <span className="text-blue-700 font-semibold">
                 "International Conference on Vision@2047: A Prosperous and Great Bharat 2.0"
@@ -39,7 +74,6 @@ export default function AboutSection() {
               Eight transformative thematic tracks:
             </p>
 
-            {/* Tracks */}
             <div className="space-y-4">
               {conferenceData.objectives.map((track, idx) => (
                 <p
@@ -61,7 +95,6 @@ export default function AboutSection() {
         {/* 🔥 Mission & Vision */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
 
-          {/* Mission */}
           <div className="bg-white rounded-xl shadow-xl p-8 md:p-10 border-l-4 border-blue-900 hover:shadow-2xl transition-shadow">
             <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 uppercase">
               {conferenceData.mission.title}
@@ -71,7 +104,6 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Vision */}
           <div className="bg-white rounded-xl shadow-xl p-8 md:p-10 border-l-4 border-yellow-500 hover:shadow-2xl transition-shadow">
             <h3 className="text-2xl md:text-3xl font-bold text-yellow-600 mb-6 uppercase">
               {conferenceData.vision.title}
