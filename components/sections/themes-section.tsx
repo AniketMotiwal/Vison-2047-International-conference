@@ -3,114 +3,97 @@
 import { conferenceData } from '@/lib/conference-data';
 import Script from "next/script";
 
+const CARD_COLORS = [
+  { bg: '#1a1a2e', text: '#a8b4ff' },
+  { bg: '#0d2137', text: '#7ecfff' },
+  { bg: '#1f1200', text: '#ffb347' },
+  { bg: '#0f2318', text: '#6dffb3' },
+  { bg: '#2a0d1a', text: '#ff8ab4' },
+  { bg: '#1a2a00', text: '#b8f54a' },
+  { bg: '#200a2a', text: '#d98cff' },
+  { bg: '#001f2a', text: '#4adeff' },
+  { bg: '#2a1500', text: '#ffda6a' },
+  { bg: '#0f0f0f', text: '#e0e0e0' },
+];
+
 export default function ThemesSection() {
+  const displayedThemes = conferenceData.themes.slice(0, 10);
+
   return (
-    <section id="themes" className="py-16 bg-white">
-
-      {/* 💣 HIDDEN SEO CONTENT */}
-      <h2 className="sr-only">
-        Vision 2047 Conference Themes IIT Roorkee India Innovation AI Sustainability Governance
-      </h2>
-
-      <p className="sr-only">
-        Explore key themes of Vision 2047 International Conference including artificial intelligence,
-        sustainable development, governance, innovation, economy, technology and Bharat development roadmap.
-      </p>
-
-      {/* 💣 STRUCTURED DATA (Themes List) */}
-      <Script
-        id="themes-schema"
+    <section id="themes" className="py-16 md:py-24 bg-[#faf9f6]">
+      <Script 
+        id="themes-schema" 
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
             name: "Conference Themes Vision 2047",
-            itemListElement: conferenceData.themes.map((theme, index) => ({
-              "@type": "ListItem",
-              position: index + 1,
+            itemListElement: displayedThemes.map((theme, i) => ({
+              "@type": "ListItem", 
+              position: i + 1, 
               name: theme.title,
             })),
           }),
         }}
       />
 
-      {/* Heading (UNCHANGED) */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-[#003D7A]">
-          Conference Themes
+      <div className="text-center mb-12 md:mb-16 px-4">
+        <p className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-gray-500 uppercase mb-3">
+          EXPLORE OUR VISION
+        </p>
+        <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900">
+          Conference <span className="italic font-medium">Themes</span>
         </h2>
       </div>
 
-      {/* Grid */}
-      <div className="w-full px-3 md:px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
-
-          {conferenceData.themes.map((theme, index) => (
-            
-            <div
-              key={theme.id}
-              className="
-                relative group
-                rounded-2xl
-                overflow-hidden
-                bg-white
-                border border-gray-200
-                shadow-md
-                hover:shadow-2xl
-                transition-all duration-500
-                hover:-translate-y-2
-              "
-            >
-
-              {/* Animated Top Bar */}
-              <div className="
-                h-1 w-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
-                group-hover:w-full transition-all duration-500
-              " />
-
-              {/* Background Fill */}
-              <div className="
-                absolute inset-0 
-                bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500
-                opacity-0 group-hover:opacity-10
-                transition duration-500
-              " />
-
-              {/* Content */}
-              <div className="relative p-6 flex flex-col items-center justify-center text-center gap-3">
-
-                <div className="
-                  w-12 h-12 rounded-full
-                  bg-gradient-to-br from-blue-500 to-purple-500
-                  flex items-center justify-center
-                  text-white font-bold text-lg
-                  group-hover:scale-110 transition
-                ">
-                  {index + 1}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Responsive grid: 1 column on mobile -> 2 columns on tablet -> 5 columns on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+          {displayedThemes.map((theme, index) => {
+            const color = CARD_COLORS[index % CARD_COLORS.length];
+            return (
+              <div
+                key={theme.id}
+                style={{ backgroundColor: color.bg }}
+                className="group rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
+              >
+                {/* Mobile: horizontal layout, Desktop: vertical square layout */}
+                <div className="p-4 sm:p-5 md:p-6 flex sm:flex-row lg:flex-col items-center sm:items-start lg:items-stretch gap-4 sm:gap-5 lg:gap-0 min-h-[120px] sm:min-h-[140px] lg:min-h-[220px]">
+                  
+                  {/* Number section */}
+                  <div className="flex-shrink-0">
+                    <span 
+                      style={{ color: color.text }}
+                      className="font-mono text-3xl sm:text-4xl md:text-5xl font-bold opacity-40"
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  
+                  {/* Title section */}
+                  <div className="flex-grow sm:flex-grow lg:mt-auto lg:flex-grow-0">
+                    <p 
+                      style={{ color: color.text }}
+                      className="text-sm sm:text-base md:text-lg font-bold leading-tight tracking-wide"
+                    >
+                      {theme.title}
+                    </p>
+                    
+                    {/* Animated underline */}
+                    <div className="mt-2 sm:mt-3">
+                      <div 
+                        style={{ backgroundColor: color.text }}
+                        className="h-0.5 w-8 sm:w-10 group-hover:w-full transition-all duration-300 rounded-full opacity-60"
+                      ></div>
+                    </div>
+                  </div>
                 </div>
-
-                <h3 className="
-                  font-semibold
-                  text-gray-800
-                  text-sm md:text-base
-                  leading-snug
-                  line-clamp-2
-                  group-hover:text-blue-600
-                  transition
-                ">
-                  {theme.title}
-                </h3>
-
               </div>
-
-            </div>
-
-          ))}
-
+            );
+          })}
         </div>
       </div>
-
     </section>
   );
 }

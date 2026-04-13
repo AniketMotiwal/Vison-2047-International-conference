@@ -3,17 +3,26 @@ export const conferenceData = {
   tagline: 'International Conference on Vision@2047',
   dates: 'April 24 – 26, 2026',
   location: 'Indian Institute of Technology, Roorkee, Uttarakhand',
-  
-  mission: {
-    title: 'MISSION',
-    description: 'Through rigorous research, frontier science, and deliberation across eight transformative thematic tracks, co-create a comprehensive, actionable, and time-bound policy architecture uniting government, institutions, industry, and every Bharatiya that mobilizes the nation\'s full intellectual, spiritual, entrepreneurial, and democratic energy. The result: a living Vikasit Bharat Blueprint delivering dynamic demographics, full employment, economic supremacy, scientific leadership, environmental stewardship, global brotherhood, and highest moral values.',
-  },
+
 
   vision: {
     title: 'VISION',
-    description: 'To forge Bharat into the world\'s most self-reliant, technologically sovereign, and morally luminous nation by its centenary of independence — where every citizen becomes an empowered architect of prosperity. Through a historic Bharat Manthan uniting government, scientists, youth, and all people, we convert civilizational heritage and demographic destiny into humanity\'s greatest engine of integral human flourishing.',
+    description: `To forge Bharat into the world's most self-reliant, technologically sovereign, and morally
+luminous nation by its centenary of independence — where every citizen becomes an
+empowered architect of prosperity. Through a historic Bharat Manthan uniting government,
+scientists, youth, and all people, we convert civilizational heritage and demographic destiny into
+humanity's greatest engine of integral human flourishing.`,
   },
-
+  mission: {
+    title: 'MISSION',
+    description: `Through rigorous research, frontier science, and deliberation across eight transformative
+thematic tracks, co-create a comprehensive, actionable, and time-bound policy architecture
+uniting government, institutions, industry, and every Bharatiya that mobilizes the nation's full
+intellectual, spiritual, entrepreneurial, and democratic energy. The results: a living Viksit Bharat
+blueprint delivering dynamic demographics, full employment, economic supremacy, scientific
+leadership, environmental stewardship, global brotherhood, and highest moral values making
+self-reliance the birthright of all.`,
+  },
   objectives: [
     'Forging a century-long national strategy (2025–2125) to keep Bharat the world\'s youngest, most vibrant, and most unstoppable civilisational force.',
     'Awakening the decentralised, cooperative, and district-powered economic architecture to consecrate Bharat as the world\'s largest and most inclusive economy.',
@@ -23,18 +32,18 @@ export const conferenceData = {
     'Igniting the eternal Shodh Manthan so every Garib, Yuwa, Annadata, and Nari Shakti rises as a sovereign co-creator of a joyful, self-reliant, and eternally vibrant Bharat.',
   ],
 
-themes: [
-  { id: 1, title: 'A Young Dynamic Population' },
-  { id: 2, title: 'A Fully Employed Bharat' },
-  { id: 3, title: 'An Impenetrable Security System' },
-  { id: 4, title: 'The World\'s Largest Economy' },
-  { id: 5, title: 'A Leader In Science and Technology' },
-  { id: 6, title: 'An Environment Friendly India' },
-  { id: 7, title: 'A Strong Advocate Of Global Brotherhood' },
-  { id: 8, title: 'A Proponent Of High Moral Values' },
-  { id: 9, title: 'One Nation One Research Policy' },
-  { id: 10, title: 'The Viksit Bharat Shiksha Adhishthan Bill, 2025' },
-],
+  themes: [
+    { id: 1, title: 'A Young Dynamic Population' },
+    { id: 2, title: 'A Fully Employed Bharat' },
+    { id: 3, title: 'An Impenetrable Security System' },
+    { id: 4, title: 'The World\'s Largest Economy' },
+    { id: 5, title: 'A Leader In Science and Technology' },
+    { id: 6, title: 'An Environment Friendly India' },
+    { id: 7, title: 'A Strong Advocate Of Global Brotherhood' },
+    { id: 8, title: 'A Proponent Of High Moral Values' },
+    { id: 9, title: 'One Nation One Research Policy' },
+    { id: 10, title: 'The Viksit Bharat Shiksha Adhishthan Bill, 2025' },
+  ],
 
   timeline: [
     {
