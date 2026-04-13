@@ -78,11 +78,12 @@ export default function Home() {
           <AboutSection />
           <ThemesSection />
           <TimelineSection />
-          <LocationSection />
           <WhyAttendSection />
+          <LocationSection />
+
           {/* <PatronsSection /> */}
           {/* <OrganizingCommitteeSection /> */}
-        
+
           <RegistrationSection />
           {/* <AssociationUniversitiesSection /> */}
           <ContactUs />
