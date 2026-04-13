@@ -199,12 +199,12 @@ const Navbar = () => {
     { label: 'Themes', href: '#themes' },
     { label: 'Timeline', href: '#timeline' },
     { label: 'Who Should Attend', href: '#who-should-attend' },
-    { label: 'Patrons', href: '#patrons' },
-    { label: 'Advisory Board', href: '#advisory-board' },
-    { label: 'Organizing Committee', href: '#organizing-committee' },
+    // { label: 'Patrons', href: '#patrons' },
+    // { label: 'Advisory Board', href: '#advisory-board' },
+    // { label: 'Organizing Committee', href: '#organizing-committee' },
     { label: 'How to Reach', href: '#location' },
     { label: 'Registration', href: '#registration' },
-    { label: 'Brochure', href: '#brochure' },
+    // { label: 'Brochure', href: '#brochure' },
     { label: 'Contact Us', href: '#contactus' },
   ];
 

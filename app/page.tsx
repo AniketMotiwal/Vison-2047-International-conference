@@ -79,11 +79,11 @@ export default function Home() {
           <ThemesSection />
           <TimelineSection />
           <WhyAttendSection />
-          <PatronsSection />
-          <OrganizingCommitteeSection />
+          {/* <PatronsSection /> */}
+          {/* <OrganizingCommitteeSection /> */}
           <LocationSection />
           <RegistrationSection />
-          <AssociationUniversitiesSection />
+          {/* <AssociationUniversitiesSection /> */}
           <ContactUs />
         </main>
 
