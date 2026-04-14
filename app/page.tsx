@@ -69,8 +69,9 @@ export default function Home() {
 
       {/* ✅ LOADER WRAPPER */}
       <LoadingWrapper>
+            <Header />
         <Sidebar />
-        <Header />
+    
 
         {/* ✅ MAIN CONTENT */}
         <main>

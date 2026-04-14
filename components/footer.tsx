@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#05111F', fontFamily: "'Crimson Pro', Georgia, serif", overflow: 'hidden' }}>
+    <footer style={{ background: '#05111F', fontFamily: "'Crimson Pro', Georgia, serif", overflow: 'hidden' }} id="#contactus">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
 
