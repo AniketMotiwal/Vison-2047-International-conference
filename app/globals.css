@@ -122,6 +122,7 @@
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   }
   html {
     scroll-behavior: smooth;
@@ -133,6 +134,67 @@
   --primary-blue: #003D7A;
   --primary-gold: #FFB81C;
   --primary-orange: #D97706;
+}
+
+/* Global Button Styles */
+button {
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive Font Sizing for Navigation */
+@media (max-width: 480px) {
+  /* Extra small devices - 320px to 480px */
+  header button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  nav {
+    gap: 4px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Small to medium tablets */
+  header button {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Medium to large tablets and small laptops */
+  header button {
+    font-size: 13.5px;
+    padding: 8px 14px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Desktops and laptops */
+  header button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 1441px) {
+  /* Large and extra-large screens */
+  header button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+  
+  /* Dropdown panels on large screens */
+  [role="menu"] {
+    min-width: 280px;
+  }
+  
+  [role="menuitem"] {
+    font-size: 14.5px;
+    padding: 13px 19px;
+  }
 }
 
 /* Smooth scrolling for anchor links */
@@ -174,8 +236,213 @@
   }
 }
 
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth Slide Down Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth Button Hover Animation */
+@keyframes buttonHover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+/* Marquee/Flicker Animation for Featured Items */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.8);
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+    text-shadow: 0 0 5px rgba(124, 58, 237, 0.4);
+  }
+}
+
+/* Marquee Scroll Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Smooth Dropdown Slide In */
+@keyframes slideDownSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Featured Item Pulse */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(124, 58, 237, 0);
+  }
+}
+
+/* Dropdown Item Flicker - for featured items */
+button[style*="flicker"] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smooth Dropdown Container */
+[role="menu"] {
+  animation: slideDownSmooth 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Featured banner effect */
+.featured-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* 3D Perspective */
 .perspective {
   perspective: 1000px;
+}
+
+/* ===== SMOOTH SCROLL NAVIGATION ===== */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section scroll margins for fixed navbar */
+section {
+  scroll-margin-top: 4rem;
+}
+
+/* Smooth navbar appearance */
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Nav link stagger animation */
+@keyframes navLinkSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active nav link indicator */
+@keyframes activeLinkPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0);
+  }
+}
+
+/* Floating button animations */
+@keyframes floatingButtonGrow {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatingButtonPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(15, 23, 42, 0);
+  }
+}
+
+/* Smooth scroll margin for all sections */
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
+}
+
+/* Enhanced smooth transitions */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Smooth link transitions */
+a {
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.2s ease-out;
+}
+
+/* Optimize for smooth scrolling performance */
+main {
+  will-change: auto;
+}
+
+section {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

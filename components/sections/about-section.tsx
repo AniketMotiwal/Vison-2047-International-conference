@@ -132,7 +132,7 @@ export default function AboutSection() {
         </div>
 
         {/* 🔥 Mission & Vision */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20" id="mission">
 
 
             <div className="bg-white rounded-xl shadow-xl p-8 md:p-10 border-l-4 border-yellow-500 hover:shadow-2xl transition-shadow">

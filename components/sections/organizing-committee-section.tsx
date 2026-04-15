@@ -12,7 +12,7 @@ export default function OrganizingCommittee() {
       {/* Full Width Image */}
       <div className="w-full">
         <Image
-          src="/committee/ORGANISING COMMITTEE (1).png"
+          src="/committee/ORGANISING COMMITTEE Final.png"
           alt="Organising Committee"
           width={1200}
           height={1400}

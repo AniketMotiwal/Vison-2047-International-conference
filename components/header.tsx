@@ -47,7 +47,7 @@ const Header = () => {
       <div className="flex-shrink-0 flex items-center px-1.5 sm:px-3 md:px-4">
         <div className="relative w-14 h-14 xs:w-16 xs:h-16 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-70 lg:h-70">
           <Image
-            src="/swadesheade.webp"
+            src="/swadeshi-logo.png"
             alt="Swadeshi Logo"
             fill
             className="object-contain"

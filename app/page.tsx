@@ -3,6 +3,7 @@ import Script from "next/script";
 
 import HeroSection from '@/components/hero-section';
 import AboutSection from '@/components/sections/about-section';
+
 import ThemesSection from '@/components/sections/themes-section';
 import TimelineSection from '@/components/sections/timeline-section';
 import WhyAttendSection from '@/components/sections/WhoShouldAttend';
@@ -16,6 +17,9 @@ import Header from '@/components/header';
 import Sidebar from '@/components/Sidebar';
 import ContactUs from '@/components/Contact-us';
 import LoadingWrapper from '@/components/LoadingWrapper';
+
+import SectionWrapper from '@/components/section-wrapper';
+
 
 // ✅ SEO METADATA
 export const metadata: Metadata = {
@@ -69,25 +73,52 @@ export default function Home() {
 
       {/* ✅ LOADER WRAPPER */}
       <LoadingWrapper>
-            <Header />
+
+        <Header />
         <Sidebar />
-    
+   
 
         {/* ✅ MAIN CONTENT */}
         <main>
-          <HeroSection />
-          <AboutSection />
-          <ThemesSection />
-          <TimelineSection />
-          <WhyAttendSection />
-          <LocationSection />
+          <SectionWrapper id="home">
+            <HeroSection />
+          </SectionWrapper>
 
-          {/* <PatronsSection /> */}
-          {/* <OrganizingCommitteeSection /> */}
+          <SectionWrapper id="about" darkBg>
+            <AboutSection />
+          </SectionWrapper>
 
-          <RegistrationSection />
-          {/* <AssociationUniversitiesSection /> */}
-          <ContactUs />
+          <SectionWrapper id="themes">
+            <ThemesSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="timeline" darkBg>
+            <TimelineSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="attend">
+            <WhyAttendSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="location" darkBg>
+            <LocationSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="patrons">
+            <PatronsSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="committee" darkBg>
+            <OrganizingCommitteeSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="registration">
+            <RegistrationSection />
+          </SectionWrapper>
+
+          <SectionWrapper id="contact" darkBg>
+            <ContactUs />
+          </SectionWrapper>
         </main>
 
         <Footer />
