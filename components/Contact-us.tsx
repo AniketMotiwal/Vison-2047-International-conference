@@ -28,7 +28,7 @@ const professors: Professor[] = [
     institution: 'IGNTU',
     contact: '+91 91315 06848',
     email: 'vikash.singh@igntu.ac.in',
-  linkedin: '',
+    linkedin: '',
     image: '/Untitled design/2.png',
   },
 ];
@@ -206,14 +206,9 @@ export default function ContactUs() {
 
           <div className="relative bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 rounded-[32px] p-8 md:p-10 shadow-[0_20px_60px_rgba(255,200,0,0.25)]">
 
-            <p className="text-xs tracking-[0.25em] text-yellow-600 font-semibold mb-3 text-center">
-              IMPORTANT CONTACT
-            </p>
-
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 text-center">
-              For Abstract / Paper Submission Queries
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 text-center leading-relaxed tracking-wide">
+              For Abstract and Paper Submission Queries Please Contact:
             </h3>
-
             <p className="text-lg md:text-xl font-semibold text-yellow-700 text-center mt-3">
               Ms. Shinjinee Mishra
             </p>
