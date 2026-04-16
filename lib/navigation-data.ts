@@ -33,8 +33,8 @@ export const NAV_ITEMS: NavItem[] = [
       label: 'People',
       items: [
         { label: 'Patrons', href: '#patrons' },
-        { label: 'Advisory Board', href: '/advisory-board' },
-        { label: 'Organizing Committee', href: '/organizing-committee' },
+        { label: 'Advisory Board', href: '#advisory-board' },
+        { label: 'Organizing Committee', href: '#organizing-committee' },
       ],
     },
   ],

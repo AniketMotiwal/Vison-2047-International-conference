@@ -19,6 +19,8 @@ import ContactUs from '@/components/Contact-us';
 import LoadingWrapper from '@/components/LoadingWrapper';
 
 import SectionWrapper from '@/components/section-wrapper';
+import BackToTopButton from '@/components/back-to-top-button';
+import ScrollButtons from "@/components/ScrollButtons";
 
 
 // ✅ SEO METADATA
@@ -119,8 +121,10 @@ export default function Home() {
           <SectionWrapper id="contact" darkBg>
             <ContactUs />
           </SectionWrapper>
-        </main>
 
+        
+        </main>
+<ScrollButtons />
         <Footer />
       </LoadingWrapper>
     </>

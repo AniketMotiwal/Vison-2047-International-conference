@@ -1,6 +1,9 @@
 1:"$Sreact.fragment"
-2:I[91162,["/_next/static/chunks/0dpt7pp1wav0c.js","/_next/static/chunks/0ya-.-crokf0e.js","/_next/static/chunks/0088sc-txmmvz.js"],"Image"]
-3:I[11764,["/_next/static/chunks/0dpt7pp1wav0c.js","/_next/static/chunks/0ya-.-crokf0e.js"],"OutletBoundary"]
-4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen py-12 md:py-16","children":["$","section",null,{"className":"w-full px-4 md:px-8","children":[["$","h1",null,{"className":"text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-12","children":"ADVISORY BOARD"}],["$","div",null,{"className":"w-full","children":["$","$L2",null,{"src":"/advisory/ADVISORY BOARD  (1).png","alt":"Advisory Board","width":1200,"height":1400,"className":"w-full h-auto object-contain","priority":true}]}]]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/0088sc-txmmvz.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_aYI5qMQMlgRjOJX5zQic"}
-5:null
+2:I[79478,["/_next/static/chunks/0dpt7pp1wav0c.js","/_next/static/chunks/0l98br0g8~6p3.js"],"ClientPageRoot"]
+3:I[62037,["/_next/static/chunks/0dpt7pp1wav0c.js","/_next/static/chunks/0l98br0g8~6p3.js","/_next/static/chunks/06q~xylh_ll9y.js","/_next/static/chunks/09642fkyadd9x.js"],"default"]
+6:I[11764,["/_next/static/chunks/0dpt7pp1wav0c.js","/_next/static/chunks/0l98br0g8~6p3.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/06q~xylh_ll9y.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/09642fkyadd9x.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"8A3V4sAIA6zs00g950Kbw"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null

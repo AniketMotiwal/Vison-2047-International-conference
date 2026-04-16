@@ -1,11 +1,18 @@
 'use client';
 
+import Header from "@/components/header";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/footer";
 import { conferenceData } from '@/lib/conference-data';
 
 export default function FeesPage() {
   const fees = conferenceData.registrationFees;
 
   return (
+    <>
+      <Header />
+      <Sidebar />
+
     <main className="min-h-screen bg-white py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Registration Fees & Categories</h1>
@@ -147,7 +154,25 @@ export default function FeesPage() {
             Proceed to Registration →
           </a>
         </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex gap-4 justify-center pt-8 mt-12">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            ⬆️ Back to Top
+          </button>
+          <a
+            href="/"
+            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            🏠 Back to Homepage
+          </a>
+        </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

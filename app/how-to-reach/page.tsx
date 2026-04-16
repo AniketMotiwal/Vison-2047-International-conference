@@ -466,6 +466,22 @@ export default function HowToReach() {
         </div>
         <span className="coord-text">Roorkee, Uttarakhand · India</span>
       </div>
+
+      {/* Navigation Buttons */}
+      <div style={{ padding: '32px', textAlign: 'center', display: 'flex', gap: '16px', justifyContent: 'center' }}>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ background: '#1e40af', color: 'white', padding: '12px 32px', borderRadius: '8px', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}
+        >
+          ⬆️ Back to Top
+        </button>
+        <a
+          href="/"
+          style={{ background: '#4b5563', color: 'white', padding: '12px 32px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block' }}
+        >
+          🏠 Back to Homepage
+        </a>
+      </div>
     </div>
   );
 }

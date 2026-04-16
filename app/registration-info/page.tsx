@@ -1,7 +1,20 @@
+
 'use client';
+import Sidebar from "@/components/Sidebar";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+
+
 
 export default function RegistrationInfoPage() {
   return (
+    <>
+
+       <Header />
+        <Sidebar />
+    
+
     <main className="min-h-screen bg-white py-16 md:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Registration Information</h1>
@@ -106,8 +119,26 @@ export default function RegistrationInfoPage() {
               </li>
             </ul>
           </section>
+
+          {/* Back to Top Button */}
+          <div className="flex gap-4 justify-center pt-8">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
+            >
+              ⬆️ Back to Top
+            </button>
+            <a
+              href="/"
+              className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition"
+            >
+              🏠 Back to Homepage
+            </a>
+          </div>
         </div>
       </div>
     </main>
+        <Footer />
+    </>
   );
 }

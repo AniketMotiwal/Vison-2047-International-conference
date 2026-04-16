@@ -1,34 +1,19 @@
 'use client';
 
+import Header from "@/components/header";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/footer";
+
 export default function PaymentInstructionsPage() {
   return (
-    <main className="min-h-screen bg-white py-16 md:py-24 px-4">
+    <>
+      <Header />
+      <Sidebar />
+      <main className="min-h-screen bg-white py-16 md:py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Payment Instructions</h1>
 
-        {/* Payment Methods */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Payment Methods</h2>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 mb-6 border border-blue-200">
-            <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-3">
-              <span className="text-2xl">🏦</span> SBI Collect (Recommended)
-            </h3>
-            <p className="text-gray-800 mb-4">
-              Pay online through SBI's secure payment gateway. This is the recommended method for hassle-free transactions.
-            </p>
-            <a
-              href="https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
-            >
-              💳 Pay Now via SBI Collect
-            </a>
-          </div>
-        </section>
-
-        {/* Step-by-step Instructions */}
+  {/* Step-by-step Instructions */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Step-by-Step Payment Instructions</h2>
           
@@ -93,6 +78,29 @@ export default function PaymentInstructionsPage() {
           </div>
         </section>
 
+        {/* Payment Methods */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Payment Methods</h2>
+          
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 mb-6 border border-blue-200">
+            <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-3">
+              <span className="text-2xl">🏦</span> SBI Collect (Recommended)
+            </h3>
+            <p className="text-gray-800 mb-4">
+              Pay online through SBI's secure payment gateway. This is the recommended method for hassle-free transactions.
+            </p>
+            <a
+              href="https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
+            >
+              💳 Pay Now via SBI Collect
+            </a>
+          </div>
+        </section>
+
+      
         {/* Payment Gateway Support */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Supported Payment Methods on SBI Collect</h2>
@@ -175,18 +183,26 @@ export default function PaymentInstructionsPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <div className="text-center">
-          <a
-            href="https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-12 rounded-lg transition text-lg"
+
+
+        {/* Navigation Buttons */}
+        <div className="flex gap-4 justify-center pt-8 mt-12">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
           >
-            💳 Proceed to Payment →
+            ⬆️ Back to Top
+          </button>
+          <a
+            href="/"
+            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            🏠 Back to Homepage
           </a>
         </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

@@ -1,4 +1,7 @@
 'use client';
+import Header from "@/components/header";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/footer";
 import Script from "next/script";
 
 export default function PoliciesPage() {
@@ -30,7 +33,10 @@ export default function PoliciesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 py-12 md:py-20">
+    <>
+      <Header />
+      <Sidebar />
+      <main className="min-h-screen bg-gray-50 py-12 md:py-20">
       <Script
         id="policies-schema"
         type="application/ld+json"
@@ -101,7 +107,25 @@ export default function PoliciesPage() {
             </div>
           </div>
         </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex gap-4 justify-center pt-8 mt-12">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            ⬆️ Back to Top
+          </button>
+          <a
+            href="/"
+            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition"
+          >
+            🏠 Back to Homepage
+          </a>
+        </div>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }
