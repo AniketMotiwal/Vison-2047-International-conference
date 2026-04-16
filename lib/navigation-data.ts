@@ -74,8 +74,9 @@ export const NAV_ITEMS: NavItem[] = [
       {
         label: 'Payment',
         items: [
+           { label: 'Payment Instructions', href: '/payment-instructions' },
           { label: 'Pay Now (SBI Collect)', href: 'https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641', featured: true },
-          { label: 'Payment Instructions', href: '/payment-instructions' },
+         
         ],
       },
     ],
