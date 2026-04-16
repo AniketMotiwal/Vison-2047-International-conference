@@ -480,7 +480,7 @@ export default function HeroSection() {
                   <div className={`transition-all duration-700 ${isTypingComplete ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
                     <div className="w-20 h-px bg-white/40 mx-auto my-3" />
                     <p className="text-white text-lg md:text-xl">
-                      📍 IIT Roorkee, Uttarakhand
+                      📍Indian Institute of Technology Roorkee, Roorkee, Uttarakhand, India
                     </p>
                   </div>
 
