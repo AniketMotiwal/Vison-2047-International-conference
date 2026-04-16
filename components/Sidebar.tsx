@@ -93,7 +93,7 @@ function DropdownPanel({
                   width: '100%',
                   textAlign: 'left',
                   padding: '12px 18px',
-                  fontSize: '14px',
+                  fontSize: '20px',
                   fontWeight: item.featured ? 700 : 600,
                   color: item.featured ? '#6B21A8' : '#333333',
                   background: item.featured ? '#FAF7FF' : 'transparent',

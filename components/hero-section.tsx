@@ -456,7 +456,7 @@ export default function HeroSection() {
                 src={img}
                 alt="Vision 2047 Conference IIT Roorkee"
                 className="w-full h-auto block"
-                style={{ filter: 'brightness(1.2) contrast(1.1) saturate(1.05)' }}
+                // style={{ filter: 'brightness(1.2) contrast(1.1) saturate(1.05)' }}
               />
 
               {/* Overlay */}
