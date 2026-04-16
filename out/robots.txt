@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://vision2047.iitr.ac.in
-
-# Sitemaps
-Sitemap: https://vision2047.iitr.ac.in/sitemap.xml
