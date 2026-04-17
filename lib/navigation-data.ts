@@ -108,7 +108,7 @@ export const NAV_ITEMS: NavItem[] = [
         label: 'Venue Information',
         items: [
           { label: 'How to Reach', href: '/how-to-reach' },
-          { label: 'Venue Details', href: '#venue' },
+          { label: 'Venue Details', href: '/Venue ' },
         ],
       },
       // {
