@@ -78,7 +78,7 @@ function Atmosphere() {
   );
 }
 
-/* ================= HOTSPOTS ================= */
+/* ================= MARKER ================= */
 function Marker({ lat, lng }: { lat: number; lng: number }) {
   const radius = 2;
 
@@ -110,7 +110,7 @@ function Globe() {
         <Earth />
         <Atmosphere />
 
-        {/* HOTSPOTS */}
+        {/* Hotspots */}
         <Marker lat={28.8295} lng={77.9250} />
         <Marker lat={40.7128} lng={-74.0060} />
         <Marker lat={51.5074} lng={-0.1278} />
@@ -150,6 +150,8 @@ export default function Page() {
   const target = new Date('2026-04-24T09:00:00+05:30');
   const { days, hours, minutes, seconds } = useCountdown(target);
 
+  const [openPDF, setOpenPDF] = useState(false);
+
   const pad = (n: number) => String(n).padStart(2, '0');
 
   const card1 = useTilt();
@@ -161,6 +163,7 @@ export default function Page() {
 
       {/* HERO */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+
         <div className="text-center px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-orange-400 leading-tight tracking-tight mb-4">
             VISION 2047
@@ -173,8 +176,20 @@ export default function Page() {
             Great Bharat 2.0
           </p>
         </div>
-        {/* 🌍 GLOBE */}
+
+        {/* 🌍 Globe */}
         <Globe />
+
+        {/* BUTTON */}
+        <button
+          onClick={() => setOpenPDF(true)}
+          className="mt-8 px-10 py-4 text-lg font-semibold rounded-full
+          bg-gradient-to-r from-orange-400 to-orange-600
+          hover:scale-110 hover:shadow-[0_0_30px_rgba(255,120,50,0.8)]
+          transition-all duration-300"
+        >
+          View Venue Details
+        </button>
 
         {/* COUNTDOWN */}
         <div className="flex gap-4 mt-10">
@@ -195,56 +210,44 @@ export default function Page() {
       <section className="py-20 px-6">
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-          {/* CARD 1 */}
-          <div
-            ref={card1.ref}
-            onMouseMove={card1.handleMove}
-            onMouseLeave={card1.reset}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
-          >
+          <div ref={card1.ref} onMouseMove={card1.handleMove} onMouseLeave={card1.reset} className="bg-white/5 p-6 rounded-xl border border-white/10">
             <h3 className="text-orange-300">Conference Venue</h3>
-            <p className="text-sm mt-2">
-              Hosted at IIT Roorkee, bringing innovators together.
-            </p>
-            <p className="text-sm mt-3 opacity-60">
-              स्थान: आईआईटी रुड़की
-            </p>
+            <p className="text-sm mt-2">Hosted at IIT Roorkee, bringing innovators together.</p>
+            <p className="text-sm mt-3 opacity-60">स्थान: आईआईटी रुड़की</p>
           </div>
 
-          {/* CARD 2 */}
-          <div
-            ref={card2.ref}
-            onMouseMove={card2.handleMove}
-            onMouseLeave={card2.reset}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
-          >
+          <div ref={card2.ref} onMouseMove={card2.handleMove} onMouseLeave={card2.reset} className="bg-white/5 p-6 rounded-xl border border-white/10">
             <h3 className="text-orange-300">Organized By</h3>
-            <p className="text-sm mt-2">
-              IIT Roorkee and Swadeshi Shodh Sansthan
-            </p>
-            <p className="text-sm mt-3 opacity-60">
-              आयोजक: आईआईटी रुड़की एवं स्वदेशी शोध संस्थान
-            </p>
+            <p className="text-sm mt-2">IIT Roorkee and Swadeshi Shodh Sansthan</p>
+            <p className="text-sm mt-3 opacity-60">आयोजक: आईआईटी रुड़की एवं स्वदेशी शोध संस्थान</p>
           </div>
 
-          {/* CARD 3 */}
-          <div
-            ref={card3.ref}
-            onMouseMove={card3.handleMove}
-            onMouseLeave={card3.reset}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
-          >
+          <div ref={card3.ref} onMouseMove={card3.handleMove} onMouseLeave={card3.reset} className="bg-white/5 p-6 rounded-xl border border-white/10">
             <h3 className="text-orange-300">Venue Details</h3>
-            <p className="text-sm mt-2">
-              Convocation Hall and MAC Auditorium
-            </p>
-            <p className="text-sm mt-3 opacity-60">
-              स्थान: दीक्षांत भवन एवं मैक ऑडिटोरियम
-            </p>
+            <p className="text-sm mt-2">Convocation Hall and MAC Auditorium</p>
+            <p className="text-sm mt-3 opacity-60">स्थान: दीक्षांत भवन एवं मैक ऑडिटोरियम</p>
           </div>
 
         </div>
       </section>
+
+      {/* PDF MODAL */}
+      {openPDF && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+
+          <button
+            onClick={() => setOpenPDF(false)}
+            className="absolute top-6 right-6 text-white text-2xl"
+          >
+            ✕
+          </button>
+
+          <iframe
+            src="/design.pdf"
+            className="w-[90%] h-[90%] rounded-xl border border-white/20"
+          />
+        </div>
+      )}
 
     </main>
   );
