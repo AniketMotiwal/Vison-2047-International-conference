@@ -21,11 +21,12 @@ export default function PatronsSection() {
       </section> */}
 
       {/* Advisory Board Section */}
-      <section id="advisory-board" className="py-8 md:py-12 scroll-mt-20">
-         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-8">
+      <section id="advisory-board" className="py-6 md:py-8 scroll-mt-20">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-3">
           ADVISORY BOARD
         </h2>
-    <div className="w-full">
+
+        <div className="w-full">
           <Image
             src="/advisory/ADVISORY BOARD  (1).png"
             alt="Advisory Board"
@@ -34,7 +35,8 @@ export default function PatronsSection() {
             className="w-full h-auto object-contain"
           />
         </div>
-      </section>
+      </section> 
+      
     </>
   );
 }
