@@ -22,6 +22,7 @@ import LoadingWrapper from '@/components/LoadingWrapper';
 import SectionWrapper from '@/components/section-wrapper';
 import BackToTopButton from '@/components/back-to-top-button';
 import ScrollButtons from "@/components/ScrollButtons";
+import AdvisoryBoard from "@/components/sections/advisory-board";
 
 
 // ✅ SEO METADATA
@@ -105,6 +106,10 @@ export default function Home() {
 
           <SectionWrapper id="location" darkBg>
             <LocationSection />
+          </SectionWrapper>
+
+ <SectionWrapper id="advisory-board">
+            <AdvisoryBoard />
           </SectionWrapper>
 
           <SectionWrapper id="patrons">

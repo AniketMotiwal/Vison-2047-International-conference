@@ -20,22 +20,6 @@ export default function PatronsSection() {
         </div>
       </section> */}
 
-      {/* Advisory Board Section */}
-      <section id="advisory-board" className="py-6 md:py-8 scroll-mt-20">
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-3">
-          ADVISORY BOARD
-        </h2>
-
-        <div className="w-full">
-          <Image
-            src="/advisory/ADVISORY BOARD  (1).png"
-            alt="Advisory Board"
-            width={1200}
-            height={1400}
-            className="w-full h-auto object-contain"
-          />
-        </div>
-      </section> 
       
     </>
   );
