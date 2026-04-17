@@ -456,7 +456,7 @@ export default function ContactUs() {
                 href="tel:8537399804"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-8 py-3 rounded-full text-lg shadow-lg hover:scale-105 transition"
               >
-                8537399804
+                8527399804
               </a>
             </div>
 
