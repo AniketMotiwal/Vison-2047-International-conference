@@ -595,16 +595,18 @@ const handleNavigate = (href: string) => {
         gap: 8px;
         color: #7f1d1d;
         text-decoration: none;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.15px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
         white-space: nowrap;
-        padding: 7px 28px;
+        padding: 9px 34px;
+        line-height: 1.35;
       }
 
       .registration-marquee-highlight {
         color: #dc2626;
-        font-weight: 800;
+        font-weight: 900;
+        font-size: 18px;
         animation: registrationHighlightPulse 1.9s ease-in-out infinite;
       }
 
@@ -612,12 +614,12 @@ const handleNavigate = (href: string) => {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
         border-radius: 999px;
         background: #ffffff;
         color: #dc2626;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 800;
         box-shadow: 0 2px 8px rgba(220, 38, 38, 0.24);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -630,6 +632,17 @@ const handleNavigate = (href: string) => {
 
       .registration-marquee-item:hover .registration-marquee-highlight {
         color: #b91c1c;
+      }
+
+      @media (max-width: 768px) {
+        .registration-marquee-item {
+          font-size: 14px;
+          padding: 8px 24px;
+        }
+
+        .registration-marquee-highlight {
+          font-size: 16px;
+        }
       }
 
       .featured-nav-item {
