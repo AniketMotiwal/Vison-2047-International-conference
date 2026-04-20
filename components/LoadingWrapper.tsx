@@ -8,7 +8,20 @@ export default function LoadingWrapper({ children }: any) {
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 800); // ⭐ max 800ms
-    return () => clearTimeout(timer);
+
+    const handlePageShow = (event: PageTransitionEvent) => {
+      // When returning with browser back-forward cache, avoid getting stuck on loader.
+      if (event.persisted) {
+        setIsLoading(false);
+      }
+    };
+
+    window.addEventListener('pageshow', handlePageShow);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('pageshow', handlePageShow);
+    };
   }, []);
 
   return (

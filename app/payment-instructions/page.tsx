@@ -9,69 +9,69 @@ export default function PaymentInstructionsPage() {
     <>
       <Header />
       <Sidebar />
-      <main className="min-h-screen bg-white py-16 md:py-24 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Payment Instructions</h1>
+      <main className="min-h-screen bg-white py-16 md:py-24 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-10">Payment Instructions</h1>
 
   {/* Step-by-step Instructions */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Step-by-Step Payment Instructions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Step-by-Step Payment Instructions</h2>
           
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-10 shadow-lg border border-blue-200">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">1</span>
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-9 md:p-12 shadow-lg border border-blue-200">
+            <div className="space-y-7">
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">1</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800"><span className="font-semibold text-blue-700">Click on "Pay Now via SBI Collect"</span> button above or follow the link provided</p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed"><span className="font-semibold text-blue-700">Click on "Pay Now via SBI Collect"</span> button above or follow the link provided</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">2</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">2</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">In Payment Category, select <span className="font-semibold text-blue-700">"Conference/Workshop/Other Charge"</span></p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">In Payment Category, select <span className="font-semibold text-blue-700">"Conference/Workshop/Other Charge"</span></p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">3</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">3</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">In Conference/Workshop code field, select <span className="font-semibold text-blue-700">"CONFR 179 MID"</span></p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">In Conference/Workshop code field, select <span className="font-semibold text-blue-700">"CONFR 179 MID"</span></p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">4</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">4</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">In Category field, select <span className="font-semibold text-blue-700">"Individual"</span></p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">In Category field, select <span className="font-semibold text-blue-700">"Individual"</span></p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">5</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">5</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">Fill in your details (Name, Email, Phone, Amount based on your category)</p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">Fill in your details (Name, Email, Phone, Amount based on your category)</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">6</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">6</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">Review your payment details and click <span className="font-semibold text-blue-700">"Proceed to Payment"</span></p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">Review your payment details and click <span className="font-semibold text-blue-700">"Proceed to Payment"</span></p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">7</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">7</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">You will be redirected to your bank's payment page. Complete the payment using your preferred method</p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">You will be redirected to your bank's payment page. Complete the payment using your preferred method</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <span className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold">8</span>
+              <div className="flex items-start gap-5">
+                <span className="flex-shrink-0 w-11 h-11 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">8</span>
                 <div>
-                  <p className="text-lg md:text-xl text-gray-800">You will receive a payment confirmation email within 24 hours</p>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">You will receive a payment confirmation email within 24 hours</p>
                 </div>
               </div>
             </div>

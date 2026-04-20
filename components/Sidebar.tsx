@@ -382,6 +382,15 @@ const Navbar = () => {
   }, []);
 
 const handleNavigate = (href: string) => {
+  const isPdfLink = /\.pdf($|[?#])/i.test(href);
+
+  // Open PDFs in a new tab so homepage state is preserved.
+  if (isPdfLink) {
+    window.open(href, '_blank', 'noopener,noreferrer');
+    setMobileOpen(false);
+    return;
+  }
+
   // Handle external URLs (e.g., https://example.com)
   if (href.startsWith('http://') || href.startsWith('https://')) {
     window.open(href, '_blank');

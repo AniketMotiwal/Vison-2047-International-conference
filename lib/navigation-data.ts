@@ -68,13 +68,13 @@ export const NAV_ITEMS: NavItem[] = [
         items: [
           { label: 'Register Now', href: 'https://docs.google.com/forms/d/e/1FAIpQLSe9mnu68W-dQDofoEX9qR_qFh4dlJd3WuLyMEKBXxzu5ixoqA/viewform', featured: true },
           { label: 'Registration Info', href: '/registration-info' },
+         { label: 'Payment Instructions', href: '/payment-instructions' },
           { label: 'Fees & Categories', href: '/fees' },
         ],
       },
       {
         label: 'Payment',
         items: [
-           { label: 'Payment Instructions', href: '/payment-instructions' },
           { label: 'Pay Now (SBI Collect)', href: 'https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641', featured: true },
          
         ],
@@ -99,8 +99,13 @@ export const NAV_ITEMS: NavItem[] = [
           // { label: 'Booth Registration', href: '#booth-registration' },
         ],
       },
+      
     ],
   },
+  {
+  label: 'INDUSTRY-ACADEMIA CONCLAVE',
+  href: '/ INDUSTRY-ACADEMIA CONCLAVE 2026 IITR-SSS-BBGIF AD.pdf', // yahan apna actual PDF path daalna
+},
   {
     label: 'Venue / Travel',
     sections: [
