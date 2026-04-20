@@ -1,143 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 export default function Footer() {
-  const [visits, setVisits] = useState(0);
-  const [displayCount, setDisplayCount] = useState(0);
-
-  useEffect(() => {
-    const namespace = "vision2047-iitr-" + window.location.hostname;
-
-    fetch(`https://api.countapi.xyz/hit/${namespace}/visits`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.value) {
-          setVisits(data.value);
-        }
-      })
-      .catch(() => setVisits(0));
-  }, []);
-
-  // 🔥 Smooth animation (count up effect)
-  useEffect(() => {
-    let start = 0;
-    const duration = 1500; // animation time
-    const increment = visits / (duration / 16);
-
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= visits) {
-        setDisplayCount(visits);
-        clearInterval(timer);
-      } else {
-        setDisplayCount(Math.floor(start));
-      }
-    }, 16);
-
-    return () => clearInterval(timer);
-  }, [visits]);
-
   return (
-    <footer
-      style={{
-        background: "#05111F",
-        fontFamily: "'Crimson Pro', Georgia, serif",
-      }}
-    >
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:wght@400;600&display=swap');
-
-        .footer-card {
-          background: #0D1F38;
-          border: 1px solid rgba(255,184,28,0.35);
-          border-radius: 14px;
-          padding: 22px;
-          flex: 1;
-          min-width: 240px;
-          transition: transform 0.3s;
-        }
-
-        .footer-card:hover {
-          transform: translateY(-5px);
-        }
-
-        .footer-card h4 {
-          font-family: 'Cinzel', serif;
-          font-size: 12px;
-          letter-spacing: 0.15em;
-          color: #FFB81C;
-          margin-bottom: 10px;
-        }
-
-        .footer-card p {
-          color: #C8D8F0;
-          line-height: 1.6;
-        }
-
-        .cards-row {
-          display: flex;
-          gap: 18px;
-          padding: 36px 40px;
-          flex-wrap: wrap;
-        }
-
-        .blue-strip {
-          background: linear-gradient(90deg, #003D7A, #0056C7);
-          padding: 18px 40px;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          border-top: 2px solid #FFB81C;
-        }
-
-        .bottom-bar {
-          background: #020C18;
-          padding: 18px 40px;
-          display: flex;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .counter {
-          font-size: 18px;
-          font-weight: 700;
-          color: #FFB81C;
-          letter-spacing: 1px;
-        }
-
-        .footer-link {
-          color: #7A99BB;
-          text-decoration: none;
-          font-size: 13px;
-        }
-
-        .footer-link:hover {
-          color: #FFB81C;
-        }
-
-        @media (max-width: 768px) {
-          .cards-row, .blue-strip, .bottom-bar {
-            padding: 20px;
-          }
-          .footer-card {
-            min-width: 100%;
-          }
-        }
-      `}</style>
-
+    <footer className="bg-[#05111F] font-serif">
       {/* TOP CARDS */}
-      <div className="cards-row">
-        <div className="footer-card">
-          <h4>Conference</h4>
-          <p>Vision 2047: Prosperous and Great Bharat 2.0</p>
+      <div className="flex flex-wrap gap-5 px-10 py-9 max-md:px-5">
+        <div className="bg-[#0D1F38] border border-yellow-400/40 rounded-xl p-5 flex-1 min-w-[240px] hover:-translate-y-1 transition">
+          <h4 className="text-xs tracking-widest text-yellow-400 mb-2 font-semibold">
+            Conference
+          </h4>
+          <p className="text-blue-100 leading-relaxed">
+            Vision 2047: Prosperous and Great Bharat 2.0
+          </p>
         </div>
 
-        <div className="footer-card">
-          <h4>Venue & Date</h4>
-          <p>
+        <div className="bg-[#0D1F38] border border-yellow-400/40 rounded-xl p-5 flex-1 min-w-[240px] hover:-translate-y-1 transition">
+          <h4 className="text-xs tracking-widest text-yellow-400 mb-2 font-semibold">
+            Venue & Date
+          </h4>
+          <p className="text-blue-100 leading-relaxed">
             📅 April 24 – April 26, 2026 <br />
             📍 IIT Roorkee, Uttarakhand
           </p>
@@ -145,32 +26,32 @@ export default function Footer() {
       </div>
 
       {/* BLUE STRIP */}
-      <div className="blue-strip">
-        <span style={{ color: "#FFD966", fontWeight: 600 }}>
+      <div className="bg-gradient-to-r from-blue-900 to-blue-600 px-10 py-4 flex justify-between flex-wrap border-t-2 border-yellow-400 max-md:px-5">
+        <span className="text-yellow-300 font-semibold">
           "For a Prosperous and Great Bharat 2.0"
         </span>
 
-        <span style={{ color: "#A8C4E8" }}>
+        <span className="text-blue-200">
           IIT Roorkee × Swadeshi Shodh Sansthan
         </span>
       </div>
 
       {/* BOTTOM */}
-      <div className="bottom-bar">
-        <p style={{ color: "#7A99BB", margin: 0 }}>
+      <div className="bg-[#020C18] px-10 py-4 flex justify-between flex-wrap items-center gap-3 max-md:px-5">
+        <p className="text-blue-300 m-0 text-sm">
           © {new Date().getFullYear()} Vision 2047 Conference
         </p>
 
-        {/* 🔥 ANIMATED COUNTER */}
-        <div>
-          👀 Visitors: <span className="counter">{displayCount}</span>
+        <div className="flex gap-4">
+          <a href="#" className="text-blue-400 text-xs hover:text-yellow-400">Privacy</a>
+          <a href="#" className="text-blue-400 text-xs hover:text-yellow-400">Terms</a>
+          <a href="#" className="text-blue-400 text-xs hover:text-yellow-400">Sitemap</a>
         </div>
 
-        <div style={{ display: "flex", gap: 16 }}>
-          <a href="#" className="footer-link">Privacy</a>
-          <a href="#" className="footer-link">Terms</a>
-          <a href="#" className="footer-link">Sitemap</a>
-        </div>
+        {/* VERY SMALL DESIGN CREDIT */}
+        <p className="w-full text-center text-[10px] text-yellow-200/40 mt-2">
+          Designed by <span className="opacity-60">Aniket motiwal</span>
+        </p>
       </div>
     </footer>
   );
