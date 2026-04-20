@@ -88,45 +88,53 @@ function DropdownPanel({
               <button
                 key={item.href}
                 onClick={() => onSelect(item.href)}
+                className={item.featured ? 'featured-nav-item' : undefined}
                 style={{
                   display: 'block',
                   width: '100%',
                   textAlign: 'left',
                   padding: '12px 18px',
                   fontSize: '17px',
-                  fontWeight: item.featured ? 700 : 600,
-                  color: item.featured ? '#6B21A8' : '#333333',
-                  background: item.featured ? '#FAF7FF' : 'transparent',
+                  fontWeight: item.featured ? 800 : 600,
+                  color: item.featured ? '#DC2626' : '#333333',
+                  background: item.featured ? '#FFF1F2' : 'transparent',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  borderLeft: `4px solid ${item.featured ? '#7C3AED' : 'transparent'}`,
+                  borderLeft: `4px solid ${item.featured ? '#DC2626' : 'transparent'}`,
                   fontFamily: 'Inter, Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
                   letterSpacing: '0.3px',
                   lineHeight: '1.6',
-                  animation: item.featured ? 'flicker 3s ease-in-out infinite' : 'none',
+                  animation: 'none',
                   position: 'relative',
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget;
-                  el.style.background = item.featured ? '#F3E8FF' : '#F5F0FF';
-                  el.style.color = '#7C3AED';
+                  el.style.background = item.featured ? '#FEE2E2' : '#F5F0FF';
+                  el.style.color = item.featured ? '#B91C1C' : '#7C3AED';
                   el.style.paddingLeft = '22px';
                   if (item.featured) {
-                    el.style.boxShadow = '0 0 20px rgba(124, 58, 237, 0.4), inset 0 0 15px rgba(124, 58, 237, 0.1)';
+                    el.style.boxShadow = '0 8px 20px rgba(220, 38, 38, 0.18), inset 0 0 12px rgba(220, 38, 38, 0.12)';
                   }
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
-                  el.style.background = item.featured ? '#FAF7FF' : 'transparent';
-                  el.style.color = item.featured ? '#6B21A8' : '#333333';
+                  el.style.background = item.featured ? '#FFF1F2' : 'transparent';
+                  el.style.color = item.featured ? '#DC2626' : '#333333';
                   el.style.paddingLeft = '18px';
                   if (item.featured) {
                     el.style.boxShadow = 'none';
                   }
                 }}
               >
-                {item.label}
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <span className={item.featured ? 'featured-nav-label' : undefined}>{item.label}</span>
+                  {item.featured && (
+                    <span className="featured-nav-icon" aria-hidden="true">
+                      <span className="featured-nav-arrow">➜</span>
+                    </span>
+                  )}
+                </span>
               </button>
             ))}
           </div>
@@ -310,6 +318,7 @@ function MobileNavItem({
               <button
                 key={sub.href}
                 onClick={() => onNavigate(sub.href)}
+                className={sub.featured ? 'featured-nav-item' : undefined}
                 style={{
                   display: 'block',
                   width: '100%',
@@ -317,29 +326,36 @@ function MobileNavItem({
                   padding: '10px 10px',
                   borderRadius: '6px',
                   fontSize: '13px',
-                  fontWeight: sub.featured ? 700 : 600,
-                  color: sub.featured ? '#FFE082' : 'rgba(255,255,255,0.80)',
-                  background: 'transparent',
+                  fontWeight: sub.featured ? 800 : 600,
+                  color: sub.featured ? '#FCA5A5' : 'rgba(255,255,255,0.80)',
+                  background: sub.featured ? 'rgba(127, 29, 29, 0.25)' : 'transparent',
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   fontFamily: 'Inter, Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
                   letterSpacing: '0.2px',
                   lineHeight: '1.5',
-                  animation: sub.featured ? 'flicker 3s ease-in-out infinite' : 'none',
+                  animation: 'none',
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget;
-                  el.style.background = 'rgba(255,255,255,0.15)';
+                  el.style.background = sub.featured ? 'rgba(220, 38, 38, 0.35)' : 'rgba(255,255,255,0.15)';
                   el.style.paddingLeft = '14px';
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
-                  el.style.background = 'transparent';
+                  el.style.background = sub.featured ? 'rgba(127, 29, 29, 0.25)' : 'transparent';
                   el.style.paddingLeft = '10px';
                 }}
               >
-                {sub.label}
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                  <span className={sub.featured ? 'featured-nav-label' : undefined}>{sub.label}</span>
+                  {sub.featured && (
+                    <span className="featured-nav-icon" aria-hidden="true">
+                      <span className="featured-nav-arrow">➜</span>
+                    </span>
+                  )}
+                </span>
               </button>
             ))
           )}
@@ -354,6 +370,10 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
   const router = useRouter();
+  const registrationLink =
+    NAV_ITEMS.flatMap((item) => item.sections?.flatMap((section) => section.items) ?? [])
+      .find((entry) => entry.featured && entry.label.toLowerCase().includes('register'))?.href ??
+    'https://docs.google.com/forms/d/e/1FAIpQLSe9mnu68W-dQDofoEX9qR_qFh4dlJd3WuLyMEKBXxzu5ixoqA/viewform';
 
   useEffect(() => {
     const allHrefs = NAV_ITEMS.flatMap((item) =>
@@ -426,6 +446,7 @@ const handleNavigate = (href: string) => {
   setMobileOpen(false);
 };
   return (
+    <>
     <header
       style={{
         position: 'sticky',
@@ -439,6 +460,38 @@ const handleNavigate = (href: string) => {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
       }}
     >
+      <div className="registration-marquee" role="region" aria-label="Registration announcement">
+        <div className="registration-marquee-track">
+          <a
+            href={registrationLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="registration-marquee-item"
+          >
+            <span>Please</span>
+            <span className="registration-marquee-highlight">Register Now</span>
+            <span>- Click here to fill the Google Form</span>
+            <span className="registration-marquee-icon" aria-hidden="true">
+              ➜
+            </span>
+          </a>
+          <a
+            href={registrationLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="registration-marquee-item"
+            aria-hidden="true"
+          >
+            <span>Please</span>
+            <span className="registration-marquee-highlight">Register Now</span>
+            <span>- Click here to fill the Google Form</span>
+            <span className="registration-marquee-icon" aria-hidden="true">
+              ➜
+            </span>
+          </a>
+        </div>
+      </div>
+
       {/* ── Desktop ── */}
       <div
         className="hidden lg:flex"
@@ -522,6 +575,154 @@ const handleNavigate = (href: string) => {
         </nav>
       )}
     </header>
+    <style jsx>{`
+      .registration-marquee {
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(220, 38, 38, 0.28);
+        background: linear-gradient(90deg, #fff8f8 0%, #fff2f2 50%, #fff8f8 100%);
+      }
+
+      .registration-marquee-track {
+        display: flex;
+        width: max-content;
+        animation: registrationMarqueeScroll 20s linear infinite;
+      }
+
+      .registration-marquee-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #7f1d1d;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.15px;
+        white-space: nowrap;
+        padding: 7px 28px;
+      }
+
+      .registration-marquee-highlight {
+        color: #dc2626;
+        font-weight: 800;
+        animation: registrationHighlightPulse 1.9s ease-in-out infinite;
+      }
+
+      .registration-marquee-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #dc2626;
+        font-size: 12px;
+        font-weight: 800;
+        box-shadow: 0 2px 8px rgba(220, 38, 38, 0.24);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .registration-marquee-item:hover .registration-marquee-icon {
+        transform: translateX(2px) scale(1.08);
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.32);
+      }
+
+      .registration-marquee-item:hover .registration-marquee-highlight {
+        color: #b91c1c;
+      }
+
+      .featured-nav-item {
+        position: relative;
+        border-radius: 8px;
+      }
+
+      .featured-nav-label {
+        font-weight: 800;
+        color: #dc2626;
+        text-shadow: 0 0 0 rgba(220, 38, 38, 0.15);
+      }
+
+      .featured-nav-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 999px;
+        background: #ffffff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+        animation: featuredIconPulse 1.9s ease-in-out infinite;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .featured-nav-arrow {
+        display: inline-block;
+        font-size: 12px;
+        color: #dc2626;
+        font-weight: 800;
+        line-height: 1;
+        animation: featuredArrowBounce 1.4s ease-in-out infinite;
+        transition: transform 0.25s ease, color 0.25s ease;
+      }
+
+      .featured-nav-item:hover .featured-nav-icon {
+        transform: translateX(2px) scale(1.08);
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+      }
+
+      .featured-nav-item:hover .featured-nav-arrow {
+        transform: translateX(3px);
+        color: #b91c1c;
+      }
+
+      @keyframes featuredArrowBounce {
+        0%,
+        100% {
+          transform: translateX(0);
+          opacity: 0.9;
+        }
+        40% {
+          transform: translateX(2px);
+        }
+        60% {
+          transform: translateX(2px);
+          opacity: 1;
+        }
+      }
+
+      @keyframes featuredIconPulse {
+        0%,
+        100% {
+          box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+        }
+        50% {
+          box-shadow: 0 2px 14px rgba(220, 38, 38, 0.4);
+        }
+      }
+
+      @keyframes registrationMarqueeScroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes registrationHighlightPulse {
+        0%,
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 0 rgba(220, 38, 38, 0.35);
+        }
+        50% {
+          opacity: 0.9;
+          text-shadow: 0 0 10px rgba(220, 38, 38, 0.28);
+        }
+      }
+    `}</style>
+    </>
   );
 };
 
