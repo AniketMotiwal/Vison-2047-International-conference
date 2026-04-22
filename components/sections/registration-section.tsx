@@ -28,7 +28,7 @@ export default function RegistrationSection() {
               aria-label="Scan to Attendee Form"
             >
               <div className="flex items-center justify-between mb-4">
-                <p className="text-sm md:text-base font-semibold text-red-700">Scan to Attendee Form</p>
+                <p className="text-sm md:text-base font-semibold text-red-700">Scan to Registration Form (Only for Attendee)</p>
                 <span className="inline-flex h-3 w-3 rounded-full bg-red-500 registration-pulse-dot" />
               </div>
               <div className="bg-white rounded-xl p-3 md:p-4">
@@ -41,10 +41,10 @@ export default function RegistrationSection() {
               </div>
               <div className="mt-5">
                 <div className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 md:py-3.5 text-base md:text-lg font-extrabold text-white transition-all duration-300 group-hover:bg-red-700 group-hover:scale-[1.02]">
-                  <span>Attendee Form</span>
+                  <span>Registration Form (Only for Attendee)</span>
                   <span className="registration-arrow" aria-hidden="true">➜</span>
                 </div>
-                <p className="mt-2 text-xs md:text-sm text-red-700 font-medium">Fill attendee details here</p>
+                <p className="mt-2 text-xs md:text-sm text-red-700 font-medium">Only for attendees - fill this form first.</p>
               </div>
             </a>
 
@@ -52,12 +52,12 @@ export default function RegistrationSection() {
               href={paymentUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-cyan-100 p-5 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group block rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-50 to-green-100 p-5 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               aria-label="Scan to Pay"
             >
               <div className="flex items-center justify-between mb-4">
-                <p className="text-sm md:text-base font-semibold text-blue-700">Scan to Pay</p>
-                <span className="inline-flex h-3 w-3 rounded-full bg-blue-500" />
+                <p className="text-sm md:text-base font-semibold text-emerald-800">Scan to Pay</p>
+                <span className="inline-flex h-3 w-3 rounded-full bg-emerald-600" />
               </div>
               <div className="bg-white rounded-xl p-3 md:p-4">
                 <img
@@ -68,11 +68,11 @@ export default function RegistrationSection() {
                 />
               </div>
               <div className="mt-5">
-                <div className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 md:py-3.5 text-base md:text-lg font-bold text-white transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-[1.02]">
+                <div className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-800 px-4 py-3 md:py-3.5 text-base md:text-lg font-bold text-white transition-all duration-300 group-hover:bg-emerald-900 group-hover:scale-[1.02]">
                   <span>Pay Now</span>
                   <span aria-hidden="true">→</span>
                 </div>
-                <p className="mt-2 text-xs md:text-sm text-blue-700 font-medium">Secure SBI Collect payment gateway</p>
+                <p className="mt-2 text-xs md:text-sm text-emerald-800 font-medium">Secure SBI Collect payment gateway</p>
               </div>
             </a>
           </div>

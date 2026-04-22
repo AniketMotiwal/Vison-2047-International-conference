@@ -376,7 +376,7 @@ const Navbar = () => {
     'https://docs.google.com/forms/d/e/1FAIpQLSe9mnu68W-dQDofoEX9qR_qFh4dlJd3WuLyMEKBXxzu5ixoqA/viewform';
   const attendeeFormLink =
     NAV_ITEMS.flatMap((item) => item.sections?.flatMap((section) => section.items) ?? [])
-      .find((entry) => entry.label.toLowerCase().includes('attendee form'))?.href ??
+      .find((entry) => entry.label.toLowerCase().includes('only for attendee'))?.href ??
     'https://forms.gle/er6bf4gKrA2JMAvy8';
 
   useEffect(() => {
@@ -473,7 +473,7 @@ const handleNavigate = (href: string) => {
             className="registration-marquee-item"
           >
             <span>Please</span>
-            <span className="registration-marquee-highlight">Attendee Form</span>
+            <span className="registration-marquee-highlight">Registration Form (Only for Attendee)</span>
             <span>- Click here to fill the Google Form</span>
             <span className="registration-marquee-icon" aria-hidden="true">
               ➜
@@ -487,7 +487,7 @@ const handleNavigate = (href: string) => {
             aria-hidden="true"
           >
             <span>Please</span>
-            <span className="registration-marquee-highlight">Attendee Form</span>
+            <span className="registration-marquee-highlight">Registration Form (Only for Attendee)</span>
             <span>- Click here to fill the Google Form</span>
             <span className="registration-marquee-icon" aria-hidden="true">
               ➜
