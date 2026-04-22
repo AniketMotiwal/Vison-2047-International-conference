@@ -1,9 +1,9 @@
 'use client';
 
 export default function RegistrationSection() {
-  const registerUrl = 'https://forms.gle/Pr1dqxjeK84TAhf36';
+  const attendeeFormUrl = 'https://forms.gle/er6bf4gKrA2JMAvy8';
   const paymentUrl = 'https://onlinesbi.sbi.bank.in/sbicollect/icollecthome.htm?corpID=365641';
-  const registerQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(registerUrl)}`;
+  const attendeeFormQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(attendeeFormUrl)}`;
   const paymentQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=${encodeURIComponent(paymentUrl)}`;
 
   return (
@@ -21,30 +21,30 @@ export default function RegistrationSection() {
 
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <a
-              href={registerUrl}
+              href={attendeeFormUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group block rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-rose-100 p-5 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              aria-label="Scan to Register"
+              aria-label="Scan to Attendee Form"
             >
               <div className="flex items-center justify-between mb-4">
-                <p className="text-sm md:text-base font-semibold text-red-700">Scan to Register</p>
+                <p className="text-sm md:text-base font-semibold text-red-700">Scan to Attendee Form</p>
                 <span className="inline-flex h-3 w-3 rounded-full bg-red-500 registration-pulse-dot" />
               </div>
               <div className="bg-white rounded-xl p-3 md:p-4">
                 <img
-                  src={registerQrUrl}
-                  alt="QR code for conference registration"
+                  src={attendeeFormQrUrl}
+                  alt="QR code for attendee form"
                   className="w-full h-auto max-w-[260px] md:max-w-[300px] lg:max-w-[340px] mx-auto rounded-lg"
                   loading="lazy"
                 />
               </div>
               <div className="mt-5">
                 <div className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 md:py-3.5 text-base md:text-lg font-extrabold text-white transition-all duration-300 group-hover:bg-red-700 group-hover:scale-[1.02]">
-                  <span>Register Now</span>
+                  <span>Attendee Form</span>
                   <span className="registration-arrow" aria-hidden="true">➜</span>
                 </div>
-                <p className="mt-2 text-xs md:text-sm text-red-700 font-medium"> - Register early</p>
+                <p className="mt-2 text-xs md:text-sm text-red-700 font-medium">Fill attendee details here</p>
               </div>
             </a>
 

@@ -374,6 +374,10 @@ const Navbar = () => {
     NAV_ITEMS.flatMap((item) => item.sections?.flatMap((section) => section.items) ?? [])
       .find((entry) => entry.featured && entry.label.toLowerCase().includes('register'))?.href ??
     'https://docs.google.com/forms/d/e/1FAIpQLSe9mnu68W-dQDofoEX9qR_qFh4dlJd3WuLyMEKBXxzu5ixoqA/viewform';
+  const attendeeFormLink =
+    NAV_ITEMS.flatMap((item) => item.sections?.flatMap((section) => section.items) ?? [])
+      .find((entry) => entry.label.toLowerCase().includes('attendee form'))?.href ??
+    'https://forms.gle/er6bf4gKrA2JMAvy8';
 
   useEffect(() => {
     const allHrefs = NAV_ITEMS.flatMap((item) =>
@@ -460,30 +464,30 @@ const handleNavigate = (href: string) => {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
       }}
     >
-      <div className="registration-marquee" role="region" aria-label="Registration announcement">
+      <div className="registration-marquee" role="region" aria-label="Attendee form announcement">
         <div className="registration-marquee-track">
           <a
-            href={registrationLink}
+            href={attendeeFormLink}
             target="_blank"
             rel="noopener noreferrer"
             className="registration-marquee-item"
           >
             <span>Please</span>
-            <span className="registration-marquee-highlight">Register Now</span>
+            <span className="registration-marquee-highlight">Attendee Form</span>
             <span>- Click here to fill the Google Form</span>
             <span className="registration-marquee-icon" aria-hidden="true">
               ➜
             </span>
           </a>
           <a
-            href={registrationLink}
+            href={attendeeFormLink}
             target="_blank"
             rel="noopener noreferrer"
             className="registration-marquee-item"
             aria-hidden="true"
           >
             <span>Please</span>
-            <span className="registration-marquee-highlight">Register Now</span>
+            <span className="registration-marquee-highlight">Attendee Form</span>
             <span>- Click here to fill the Google Form</span>
             <span className="registration-marquee-icon" aria-hidden="true">
               ➜

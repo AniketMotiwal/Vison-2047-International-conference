@@ -66,8 +66,8 @@ export const NAV_ITEMS: NavItem[] = [
       {
         label: 'How to Register',
         items: [
-          { label: 'Register Now', href: 'https://docs.google.com/forms/d/e/1FAIpQLSe9mnu68W-dQDofoEX9qR_qFh4dlJd3WuLyMEKBXxzu5ixoqA/viewform', featured: true },
-          { label: 'Registration Info', href: '/registration-info' },
+          { label: 'Attendee Form', href: 'https://forms.gle/er6bf4gKrA2JMAvy8', featured: true },
+          // { label: 'Registration Info', href: '/registration-info' },
          { label: 'Payment Instructions', href: '/payment-instructions' },
           { label: 'Fees & Categories', href: '/fees' },
         ],
